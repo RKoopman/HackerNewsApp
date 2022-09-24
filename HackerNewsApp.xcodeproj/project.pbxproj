@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		508889E428B94672008E1C56 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889E328B94672008E1C56 /* NetworkManager.swift */; };
+		508889E628B9492E008E1C56 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889E528B9492E008E1C56 /* PostData.swift */; };
+		508889E928B94FC6008E1C56 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889E828B94FC6008E1C56 /* DetailView.swift */; };
+		508889EB28B9526A008E1C56 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889EA28B9526A008E1C56 /* WebView.swift */; };
+		508889ED28BD5862008E1C56 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889EC28BD5862008E1C56 /* FilterButton.swift */; };
+		508889EF28BD5B5A008E1C56 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889EE28BD5B5A008E1C56 /* FilterManager.swift */; };
 		7C929F1A26977A8F002E9041 /* HackerNewsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929F1926977A8F002E9041 /* HackerNewsAppApp.swift */; };
 		7C929F1C26977A8F002E9041 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929F1B26977A8F002E9041 /* ContentView.swift */; };
 		7C929F1E26977A90002E9041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C929F1D26977A90002E9041 /* Assets.xcassets */; };
@@ -33,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		508889E328B94672008E1C56 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		508889E528B9492E008E1C56 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		508889E828B94FC6008E1C56 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		508889EA28B9526A008E1C56 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		508889EC28BD5862008E1C56 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
+		508889EE28BD5B5A008E1C56 /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
 		7C929F1626977A8F002E9041 /* HackerNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C929F1926977A8F002E9041 /* HackerNewsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsAppApp.swift; sourceTree = "<group>"; };
 		7C929F1B26977A8F002E9041 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +84,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		508889E228B94659008E1C56 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				508889E328B94672008E1C56 /* NetworkManager.swift */,
+				508889E528B9492E008E1C56 /* PostData.swift */,
+				508889EE28BD5B5A008E1C56 /* FilterManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		508889E728B94FB4008E1C56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7C929F1B26977A8F002E9041 /* ContentView.swift */,
+				508889E828B94FC6008E1C56 /* DetailView.swift */,
+				508889EA28B9526A008E1C56 /* WebView.swift */,
+				508889EC28BD5862008E1C56 /* FilterButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7C929F0D26977A8F002E9041 = {
 			isa = PBXGroup;
 			children = (
@@ -96,7 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				7C929F1926977A8F002E9041 /* HackerNewsAppApp.swift */,
-				7C929F1B26977A8F002E9041 /* ContentView.swift */,
+				508889E728B94FB4008E1C56 /* Views */,
+				508889E228B94659008E1C56 /* Models */,
 				7C929F1D26977A90002E9041 /* Assets.xcassets */,
 				7C929F2226977A90002E9041 /* Info.plist */,
 				7C929F1F26977A90002E9041 /* Preview Content */,
@@ -259,8 +293,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				508889E428B94672008E1C56 /* NetworkManager.swift in Sources */,
+				508889E628B9492E008E1C56 /* PostData.swift in Sources */,
 				7C929F1C26977A8F002E9041 /* ContentView.swift in Sources */,
+				508889EB28B9526A008E1C56 /* WebView.swift in Sources */,
+				508889E928B94FC6008E1C56 /* DetailView.swift in Sources */,
 				7C929F1A26977A8F002E9041 /* HackerNewsAppApp.swift in Sources */,
+				508889ED28BD5862008E1C56 /* FilterButton.swift in Sources */,
+				508889EF28BD5B5A008E1C56 /* FilterManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +459,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HackerNewsApp/Preview Content\"";
+				DEVELOPMENT_TEAM = MCVQ5TY7KR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HackerNewsApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -440,6 +481,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HackerNewsApp/Preview Content\"";
+				DEVELOPMENT_TEAM = MCVQ5TY7KR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HackerNewsApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -460,6 +502,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MCVQ5TY7KR;
 				INFOPLIST_FILE = HackerNewsAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -481,6 +524,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MCVQ5TY7KR;
 				INFOPLIST_FILE = HackerNewsAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -501,6 +545,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MCVQ5TY7KR;
 				INFOPLIST_FILE = HackerNewsAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -520,6 +565,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MCVQ5TY7KR;
 				INFOPLIST_FILE = HackerNewsAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

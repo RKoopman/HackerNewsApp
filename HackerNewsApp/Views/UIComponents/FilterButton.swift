@@ -27,7 +27,7 @@ struct FilterButton: View {
                 .padding(.horizontal, 6)
                 .padding(.vertical, 4)
         }
-        .background(Color.red)
+        .background(Color(UIColor(named: "lightBlue70")!))
         .cornerRadius(5.0)
         .shadow(radius: 2)
     }

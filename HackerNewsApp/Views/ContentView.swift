@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var networkManager = NetworkManager()
+    @State var currentTheme: Theme = themes[2]
     let filterManager = FilterManager.shared
     
     var body: some View {
@@ -26,7 +27,6 @@ struct ContentView: View {
                     }
                 }
                 .padding(.horizontal, 10)
-                .background(Color.clear)
                 
                 
                 List(networkManager.posts) { post in
@@ -38,10 +38,11 @@ struct ContentView: View {
                                 .padding(.horizontal, 3)
                             VStack(alignment: .leading) {
                                 Text(post.title)
-                                    
+                                    .foregroundColor(currentTheme.cellTitleTextColor)
                                 Text(String(post.url ?? " "))
                                     .font(.system(size: 10))
                                     .lineLimit(1)
+                                    .foregroundColor(currentTheme.bodyTextColorAlt)
                             }
                         }
                         
@@ -51,6 +52,7 @@ struct ContentView: View {
             }
         }
         .environmentObject(networkManager)
+        .environmentObject(currentTheme)
         .onAppear {
             self.networkManager.fetchData(callURL: "https://hn.algolia.com/api/v1/search?tags=front_page")
         }

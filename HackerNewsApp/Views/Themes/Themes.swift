@@ -18,6 +18,7 @@ class Theme: ObservableObject {
     @Published var bodyTextColorAlt: Color
     @Published var cellTitleTextColor: Color
     @Published var buttonTextColor: Color
+    @Published var cellNumberTextColor: Color
     
     init(   brandColor:Color,
             backgroundColor:Color,
@@ -26,7 +27,8 @@ class Theme: ObservableObject {
             bodyTextColor:Color,
             bodyTextColorAlt: Color,
             titleTextColor: Color,
-            buttonTextColor: Color) {
+            buttonTextColor: Color,
+            cellNumberTextColor: Color) {
         
             self.brandColor = brandColor
             self.backgroundColor = backgroundColor
@@ -36,6 +38,7 @@ class Theme: ObservableObject {
             self.bodyTextColorAlt = bodyTextColorAlt
             self.cellTitleTextColor = titleTextColor
             self.buttonTextColor = buttonTextColor
+            self.cellNumberTextColor = cellNumberTextColor
         }
 }
 
@@ -49,7 +52,8 @@ var themes: [Theme] = [
             bodyTextColor: Color(UIColor(named: "grey80")!),
             bodyTextColorAlt: Color(UIColor(named: "grey40")!),
             titleTextColor: Color(UIColor(named: "grey80")!),
-            buttonTextColor: Color(UIColor(named: "grey10")!)
+            buttonTextColor: Color(UIColor(named: "grey10")!),
+            cellNumberTextColor: Color(UIColor(named: "grey80")!)
          ),
     
     //blueish
@@ -60,18 +64,32 @@ var themes: [Theme] = [
             bodyTextColor: Color(UIColor(named: "grey20")!),
             bodyTextColorAlt: Color(UIColor(named: "grey40")!),
             titleTextColor: Color(UIColor(named: "grey10")!),
-            buttonTextColor: Color(UIColor(named: "grey10")!)
+            buttonTextColor: Color(UIColor(named: "grey10")!),
+            cellNumberTextColor: Color(UIColor(named: "grey80")!)
          ),
     
     //greenish
     Theme(  brandColor: Color(UIColor(named: "green30")!),
-            backgroundColor: Color(UIColor(named: "grey80")!),
-            contrastBackgroundColor: Color(UIColor(named: "grey60")!),
+            backgroundColor: Color(UIColor(named: "green10")!),
+            contrastBackgroundColor: Color(UIColor(named: "grey10")!),
             secondaryColor: Color(UIColor(named: "green20")!),
             bodyTextColor: Color(UIColor(named: "grey80")!),
-            bodyTextColorAlt: Color(UIColor(named: "grey50")!),
-            titleTextColor: Color(UIColor(named: "lightBlue20")!),
-            buttonTextColor: Color(UIColor(named: "lightBlue20")!)
+            bodyTextColorAlt: Color(UIColor(named: "lightBlue50")!),
+            titleTextColor: Color(UIColor(named: "green60")!),
+            buttonTextColor: Color(UIColor(named: "lightBlue10")!),
+            cellNumberTextColor: Color(UIColor(named: "green60")!)
+         ),
+    
+    //darkish
+    Theme(  brandColor: Color(UIColor(named: "red90")!),
+            backgroundColor: Color(UIColor(named: "black10")!),
+            contrastBackgroundColor: Color(UIColor(named: "grey50")!),
+            secondaryColor: Color(UIColor(named: "grey80")!),
+            bodyTextColor: Color(UIColor(named: "grey80")!),
+            bodyTextColorAlt: Color(UIColor(named: "grey80")!),
+            titleTextColor: Color(UIColor(named: "grey10")!),
+            buttonTextColor: Color(UIColor(named: "grey10")!),
+            cellNumberTextColor: Color(UIColor(named: "grey10")!)
          )
 
 ]

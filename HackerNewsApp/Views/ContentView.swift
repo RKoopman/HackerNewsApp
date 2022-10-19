@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var networkManager = NetworkManager()
-    @State var currentTheme: Theme = themes[2]
+    @State var currentTheme: Theme = themes[3]
     let filterManager = FilterManager.shared
     
     var body: some View {
@@ -25,6 +25,7 @@ struct ContentView: View {
                         filterManager.setupButton(for: .google)
                         filterManager.setupButton(for: .arVr)
                     }
+                    .background(Color.clear)
                 }
                 .padding(.horizontal, 10)
                 
@@ -38,26 +39,46 @@ struct ContentView: View {
                                 .padding(.horizontal, 3)
                             VStack(alignment: .leading) {
                                 Text(post.title)
-                                    .foregroundColor(currentTheme.cellTitleTextColor)
+                                    .foregroundColor(currentTheme.cellTitleTextColor)   // cell title
                                 Text(String(post.url ?? " "))
                                     .font(.system(size: 10))
                                     .lineLimit(1)
-                                    .foregroundColor(currentTheme.bodyTextColorAlt)
+                                    .foregroundColor(currentTheme.bodyTextColorAlt) // cell url text
                             }
                         }
+                        .foregroundColor(currentTheme.cellNumberTextColor)      // cell numbers
                         
                     }
+                    .listRowBackground(currentTheme.contrastBackgroundColor)    // cell background
+
                 }
                 .navigationTitle("Hacker News")
+                .modifier(ListBackgroundModifier())                             // clears default background for insetList
+                .background(currentTheme.backgroundColor)
             }
         }
         .environmentObject(networkManager)
         .environmentObject(currentTheme)
+        .background(currentTheme.contrastBackgroundColor)
         .onAppear {
             self.networkManager.fetchData(callURL: "https://hn.algolia.com/api/v1/search?tags=front_page")
         }
     }
 }
+
+struct ListBackgroundModifier: ViewModifier {
+
+    @ViewBuilder
+    func body(content: Content) -> some View {
+        if #available(iOS 16.0, *) {
+            content
+                .scrollContentBackground(.hidden)
+        } else {
+            content
+        }
+    }
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

@@ -10,7 +10,7 @@ import SwiftUI
 struct FilterButton: View {
 
     @EnvironmentObject var networkManager: NetworkManager
-    @State var currentTheme: Theme = themes[2]
+    @State var currentTheme: Theme = themes[3]
 
     var buttonText: String
     var buttonURL : String

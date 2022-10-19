@@ -54,28 +54,16 @@ struct ContentView: View {
                 }
                 .navigationTitle("Hacker News")
                 .modifier(ListBackgroundModifier())                             // clears default background for insetList
-                .background(currentTheme.backgroundColor)
+                .background(currentTheme.backgroundColor)                       // list background
             }
         }
         .environmentObject(networkManager)
         .environmentObject(currentTheme)
-        .background(currentTheme.contrastBackgroundColor)
+        
         .onAppear {
             self.networkManager.fetchData(callURL: "https://hn.algolia.com/api/v1/search?tags=front_page")
         }
-    }
-}
-
-struct ListBackgroundModifier: ViewModifier {
-
-    @ViewBuilder
-    func body(content: Content) -> some View {
-        if #available(iOS 16.0, *) {
-            content
-                .scrollContentBackground(.hidden)
-        } else {
-            content
-        }
+        .navigationBarColor(backgroundColor: currentTheme.backgroundColor, titleColor: currentTheme.brandColor)
     }
 }
 

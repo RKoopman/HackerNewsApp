@@ -83,11 +83,11 @@ var themes: [Theme] = [
     //darkish
     Theme(  brandColor: Color(UIColor(named: "red90")!),
             backgroundColor: Color(UIColor(named: "black10")!),
-            contrastBackgroundColor: Color(UIColor(named: "grey50")!),
+            contrastBackgroundColor: Color(UIColor(named: "grey30")!),
             secondaryColor: Color(UIColor(named: "grey80")!),
             bodyTextColor: Color(UIColor(named: "grey80")!),
             bodyTextColorAlt: Color(UIColor(named: "grey80")!),
-            titleTextColor: Color(UIColor(named: "grey10")!),
+            titleTextColor: Color(UIColor(named: "black10")!),
             buttonTextColor: Color(UIColor(named: "grey10")!),
             cellNumberTextColor: Color(UIColor(named: "grey10")!)
          )

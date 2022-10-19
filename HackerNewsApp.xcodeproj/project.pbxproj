@@ -13,6 +13,8 @@
 		508889EB28B9526A008E1C56 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889EA28B9526A008E1C56 /* WebView.swift */; };
 		508889ED28BD5862008E1C56 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889EC28BD5862008E1C56 /* FilterButton.swift */; };
 		508889EF28BD5B5A008E1C56 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889EE28BD5B5A008E1C56 /* FilterManager.swift */; };
+		5097B19D2900B0C9001C6C11 /* NavigationBarModifier+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097B19C2900B0C9001C6C11 /* NavigationBarModifier+Extentions.swift */; };
+		5097B19F2900B216001C6C11 /* ListBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097B19E2900B216001C6C11 /* ListBackgroundModifier.swift */; };
 		50D3DE3B28E8F67700756248 /* HackerColorCatalog.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D3DE3A28E8F67700756248 /* HackerColorCatalog.xcassets */; };
 		50D3DE3F28F57E0800756248 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D3DE3E28F57E0800756248 /* Themes.swift */; };
 		50D3DE4128F5883E00756248 /* Colors+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D3DE4028F5883E00756248 /* Colors+Extensions.swift */; };
@@ -47,6 +49,8 @@
 		508889EA28B9526A008E1C56 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		508889EC28BD5862008E1C56 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		508889EE28BD5B5A008E1C56 /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
+		5097B19C2900B0C9001C6C11 /* NavigationBarModifier+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationBarModifier+Extentions.swift"; sourceTree = "<group>"; };
+		5097B19E2900B216001C6C11 /* ListBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBackgroundModifier.swift; sourceTree = "<group>"; };
 		50D3DE3A28E8F67700756248 /* HackerColorCatalog.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HackerColorCatalog.xcassets; sourceTree = "<group>"; };
 		50D3DE3E28F57E0800756248 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		50D3DE4028F5883E00756248 /* Colors+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Extensions.swift"; sourceTree = "<group>"; };
@@ -119,10 +123,20 @@
 				7C929F1B26977A8F002E9041 /* ContentView.swift */,
 				508889E828B94FC6008E1C56 /* DetailView.swift */,
 				508889EA28B9526A008E1C56 /* WebView.swift */,
+				5097B19B2900B0A5001C6C11 /* Modifiers */,
 				503B880E28E1EFD300054884 /* UIComponents */,
 				50D3DE3D28F57DE000756248 /* Themes */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5097B19B2900B0A5001C6C11 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				5097B19C2900B0C9001C6C11 /* NavigationBarModifier+Extentions.swift */,
+				5097B19E2900B216001C6C11 /* ListBackgroundModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		50D3DE3C28F57D2100756248 /* Assets and Colors */ = {
@@ -325,6 +339,7 @@
 			files = (
 				508889E428B94672008E1C56 /* NetworkManager.swift in Sources */,
 				508889E628B9492E008E1C56 /* PostData.swift in Sources */,
+				5097B19F2900B216001C6C11 /* ListBackgroundModifier.swift in Sources */,
 				7C929F1C26977A8F002E9041 /* ContentView.swift in Sources */,
 				508889EB28B9526A008E1C56 /* WebView.swift in Sources */,
 				50D3DE3F28F57E0800756248 /* Themes.swift in Sources */,
@@ -333,6 +348,7 @@
 				508889ED28BD5862008E1C56 /* FilterButton.swift in Sources */,
 				508889EF28BD5B5A008E1C56 /* FilterManager.swift in Sources */,
 				50D3DE4128F5883E00756248 /* Colors+Extensions.swift in Sources */,
+				5097B19D2900B0C9001C6C11 /* NavigationBarModifier+Extentions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

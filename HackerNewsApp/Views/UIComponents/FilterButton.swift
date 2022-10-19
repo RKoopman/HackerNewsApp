@@ -10,6 +10,7 @@ import SwiftUI
 struct FilterButton: View {
 
     @EnvironmentObject var networkManager: NetworkManager
+    @State var currentTheme: Theme = themes[2]
 
     var buttonText: String
     var buttonURL : String
@@ -23,11 +24,11 @@ struct FilterButton: View {
             Text(buttonText)
                 .font(.system(size: 17))
                 .fontWeight(.heavy)
-                .foregroundColor(.white)
+                .foregroundColor(currentTheme.buttonTextColor)
                 .padding(.horizontal, 6)
                 .padding(.vertical, 4)
         }
-        .background(Color(UIColor(named: "lightBlue70")!))
+        .background(currentTheme.brandColor) 
         .cornerRadius(5.0)
         .shadow(radius: 2)
     }

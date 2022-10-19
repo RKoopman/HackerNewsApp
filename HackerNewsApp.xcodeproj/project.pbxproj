@@ -14,10 +14,11 @@
 		508889ED28BD5862008E1C56 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889EC28BD5862008E1C56 /* FilterButton.swift */; };
 		508889EF28BD5B5A008E1C56 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889EE28BD5B5A008E1C56 /* FilterManager.swift */; };
 		50D3DE3B28E8F67700756248 /* HackerColorCatalog.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D3DE3A28E8F67700756248 /* HackerColorCatalog.xcassets */; };
+		50D3DE3F28F57E0800756248 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D3DE3E28F57E0800756248 /* Themes.swift */; };
+		50D3DE4128F5883E00756248 /* Colors+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D3DE4028F5883E00756248 /* Colors+Extensions.swift */; };
 		7C929F1A26977A8F002E9041 /* HackerNewsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929F1926977A8F002E9041 /* HackerNewsAppApp.swift */; };
 		7C929F1C26977A8F002E9041 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929F1B26977A8F002E9041 /* ContentView.swift */; };
 		7C929F1E26977A90002E9041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C929F1D26977A90002E9041 /* Assets.xcassets */; };
-		7C929F2126977A90002E9041 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C929F2026977A90002E9041 /* Preview Assets.xcassets */; };
 		7C929F2C26977A90002E9041 /* HackerNewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929F2B26977A90002E9041 /* HackerNewsAppTests.swift */; };
 		7C929F3726977A90002E9041 /* HackerNewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929F3626977A90002E9041 /* HackerNewsAppUITests.swift */; };
 /* End PBXBuildFile section */
@@ -47,11 +48,12 @@
 		508889EC28BD5862008E1C56 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		508889EE28BD5B5A008E1C56 /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
 		50D3DE3A28E8F67700756248 /* HackerColorCatalog.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HackerColorCatalog.xcassets; sourceTree = "<group>"; };
+		50D3DE3E28F57E0800756248 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
+		50D3DE4028F5883E00756248 /* Colors+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Extensions.swift"; sourceTree = "<group>"; };
 		7C929F1626977A8F002E9041 /* HackerNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C929F1926977A8F002E9041 /* HackerNewsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsAppApp.swift; sourceTree = "<group>"; };
 		7C929F1B26977A8F002E9041 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7C929F1D26977A90002E9041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7C929F2026977A90002E9041 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7C929F2226977A90002E9041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C929F2726977A90002E9041 /* HackerNewsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerNewsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C929F2B26977A90002E9041 /* HackerNewsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsAppTests.swift; sourceTree = "<group>"; };
@@ -118,14 +120,32 @@
 				508889E828B94FC6008E1C56 /* DetailView.swift */,
 				508889EA28B9526A008E1C56 /* WebView.swift */,
 				503B880E28E1EFD300054884 /* UIComponents */,
+				50D3DE3D28F57DE000756248 /* Themes */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		50D3DE3C28F57D2100756248 /* Assets and Colors */ = {
+			isa = PBXGroup;
+			children = (
+				7C929F1D26977A90002E9041 /* Assets.xcassets */,
+				50D3DE3A28E8F67700756248 /* HackerColorCatalog.xcassets */,
+			);
+			path = "Assets and Colors";
+			sourceTree = "<group>";
+		};
+		50D3DE3D28F57DE000756248 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				50D3DE3E28F57E0800756248 /* Themes.swift */,
+				50D3DE4028F5883E00756248 /* Colors+Extensions.swift */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 		7C929F0D26977A8F002E9041 = {
 			isa = PBXGroup;
 			children = (
-				50D3DE3A28E8F67700756248 /* HackerColorCatalog.xcassets */,
 				7C929F1826977A8F002E9041 /* HackerNewsApp */,
 				7C929F2A26977A90002E9041 /* HackerNewsAppTests */,
 				7C929F3526977A90002E9041 /* HackerNewsAppUITests */,
@@ -150,19 +170,10 @@
 				508889E228B94659008E1C56 /* Models */,
 				503B880D28E1EF7C00054884 /* Networking */,
 				7C929F1926977A8F002E9041 /* HackerNewsAppApp.swift */,
-				7C929F1D26977A90002E9041 /* Assets.xcassets */,
+				50D3DE3C28F57D2100756248 /* Assets and Colors */,
 				7C929F2226977A90002E9041 /* Info.plist */,
-				7C929F1F26977A90002E9041 /* Preview Content */,
 			);
 			path = HackerNewsApp;
-			sourceTree = "<group>";
-		};
-		7C929F1F26977A90002E9041 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				7C929F2026977A90002E9041 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		7C929F2A26977A90002E9041 /* HackerNewsAppTests */ = {
@@ -286,7 +297,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C929F2126977A90002E9041 /* Preview Assets.xcassets in Resources */,
 				7C929F1E26977A90002E9041 /* Assets.xcassets in Resources */,
 				50D3DE3B28E8F67700756248 /* HackerColorCatalog.xcassets in Resources */,
 			);
@@ -317,10 +327,12 @@
 				508889E628B9492E008E1C56 /* PostData.swift in Sources */,
 				7C929F1C26977A8F002E9041 /* ContentView.swift in Sources */,
 				508889EB28B9526A008E1C56 /* WebView.swift in Sources */,
+				50D3DE3F28F57E0800756248 /* Themes.swift in Sources */,
 				508889E928B94FC6008E1C56 /* DetailView.swift in Sources */,
 				7C929F1A26977A8F002E9041 /* HackerNewsAppApp.swift in Sources */,
 				508889ED28BD5862008E1C56 /* FilterButton.swift in Sources */,
 				508889EF28BD5B5A008E1C56 /* FilterManager.swift in Sources */,
+				50D3DE4128F5883E00756248 /* Colors+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

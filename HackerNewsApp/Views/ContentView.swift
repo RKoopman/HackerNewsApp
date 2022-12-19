@@ -49,6 +49,7 @@ struct ContentView: View {
                     }
                 }
                 .navigationTitle("Hacker News")
+                .listStyle(.plain)
             }
         }
         .environmentObject(networkManager)

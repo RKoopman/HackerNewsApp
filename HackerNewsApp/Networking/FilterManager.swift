@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 enum FilterType {
-    case frontPage, latest, apple, google, arVr
+    case frontPage, latest, apple, google, arVr, fuboTV
 }
 
 
@@ -37,6 +37,8 @@ final class FilterManager: FilterProtocol {
                 return FilterButton(buttonText: "Latest", buttonURL: "https://hn.algolia.com/api/v1/search_by_date?tags=story")
             case .arVr:
                 return FilterButton(buttonText: "AR/VR", buttonURL: "https://hn.algolia.com/api/v1/search?query=AR-VR&tags=story")
+        case .fuboTV:
+                return FilterButton(buttonText: "fuboTV", buttonURL: "https://hn.algolia.com/api/v1/search?query=fuboTV&tags=story")
         }
     }
 }

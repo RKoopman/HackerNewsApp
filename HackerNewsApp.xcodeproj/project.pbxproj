@@ -494,7 +494,7 @@
 				DEVELOPMENT_TEAM = MCVQ5TY7KR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HackerNewsApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -516,7 +516,7 @@
 				DEVELOPMENT_TEAM = MCVQ5TY7KR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HackerNewsApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

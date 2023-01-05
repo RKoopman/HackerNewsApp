@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var networkManager = NetworkManager()
-    @State var currentTheme: Theme = themes[2]
+    @State var currentTheme: Theme = themes[0]
     let filterManager = FilterManager.shared
     
     var body: some View {

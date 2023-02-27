@@ -50,6 +50,9 @@ struct ContentView: View {
                 }
                 .navigationTitle("Hacker News")
                 .listStyle(.plain)
+                .refreshable {
+                    self.networkManager.reFetchData()
+                }
             }
         }
         .environmentObject(networkManager)

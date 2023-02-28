@@ -7,13 +7,14 @@
 
 import SwiftUI
 
-struct FilterButtonsView: View {
+struct ButtonsView: View {
     
     let filterManager = FilterManager.shared
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
+                SearchButtonView()
                 filterManager.setupButton(for: .frontPage)
                 filterManager.setupButton(for: .latest)
                 filterManager.setupButton(for: .apple)
@@ -26,8 +27,11 @@ struct FilterButtonsView: View {
     }
 }
 
-struct FilterButtonsView_Previews: PreviewProvider {
+struct ButtonsView_Previews: PreviewProvider {
     static var previews: some View {
-        FilterButtonsView()
+        VStack {
+            Spacer()
+            ButtonsView()
+        }
     }
 }

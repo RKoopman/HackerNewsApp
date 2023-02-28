@@ -41,7 +41,7 @@ struct ContentView: View {
                     self.networkManager.reFetchData()
                 }
                 
-                FilterButtonsView()
+                ButtonsView()
             }
         }
         .environmentObject(networkManager)

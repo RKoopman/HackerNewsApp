@@ -11,24 +11,11 @@ struct ContentView: View {
     
     @StateObject var networkManager = NetworkManager()
     @State var currentTheme: Theme = themes[0]
-    let filterManager = FilterManager.shared
     
     var body: some View {
         
         NavigationView {
             VStack {
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {                        
-                        filterManager.setupButton(for: .frontPage)
-                        filterManager.setupButton(for: .latest)
-                        filterManager.setupButton(for: .apple)
-                        filterManager.setupButton(for: .google)
-                        filterManager.setupButton(for: .arVr)
-                    }
-                }
-                .padding(.horizontal, 10)
-                
-                
                 List(networkManager.posts) { post in
                     NavigationLink {
                         DetailView(url: post.url)
@@ -53,6 +40,8 @@ struct ContentView: View {
                 .refreshable {
                     self.networkManager.reFetchData()
                 }
+                
+                FilterButtonsView()
             }
         }
         .environmentObject(networkManager)

@@ -10,12 +10,12 @@ import SwiftUI
 struct SearchButtonView: View {
     
     @State var currentTheme: Theme = themes[0]
-    @State var searchIsHidden = HideSearch()
+    @State private var showingSearchSheet = false
 
     var body: some View {
         Button(action: {
-            self.searchIsHidden.isHidden.toggle()
-            print("search is currently :: \(searchIsHidden.isHidden)")
+            self.showingSearchSheet.toggle()
+            print("search is currently :: \(showingSearchSheet)")
             let hapticFB = UIImpactFeedbackGenerator(style: .medium)
                 hapticFB.impactOccurred()
         }) {
@@ -23,16 +23,16 @@ struct SearchButtonView: View {
                 .foregroundColor(currentTheme.buttonTextColor)
                 .font(Font.body.weight(.heavy))
                 .padding(.horizontal, 12)
-                .padding(.vertical, 6)
+                .padding(.vertical, 12)
         }
         .background(currentTheme.brandColor)
         .cornerRadius(5.0)
         .shadow(radius: 2)
+        .sheet(isPresented: $showingSearchSheet) {
+            SearchSheetView()
+                .presentationDetents([.fraction(0.3)])
+        }
     }
-}
-
-class HideSearch: ObservableObject {
-    @Published var isHidden:Bool = false
 }
 
 struct SearchButtonView_Previews: PreviewProvider {

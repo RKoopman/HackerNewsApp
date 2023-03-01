@@ -12,7 +12,7 @@ struct ButtonsView: View {
     let filterManager = FilterManager.shared
 
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
+        ScrollView(.horizontal, showsIndicators: true) {
             HStack {
                 SearchButtonView()
                 filterManager.setupButton(for: .frontPage)
@@ -21,9 +21,10 @@ struct ButtonsView: View {
                 filterManager.setupButton(for: .google)
                 filterManager.setupButton(for: .arVr)
             }
+            .padding(.bottom, 10)
         }
         .padding(.horizontal, 10)
-
+        .padding(.bottom, 30)
     }
 }
 

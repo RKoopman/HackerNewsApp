@@ -44,7 +44,7 @@ var themes: [Theme] = [
     //default
     Theme(  brandColor: Color(UIColor(named: "red90")!),
             backgroundColor: Color(UIColor(named: "grey10")!),
-            contrastBackgroundColor: Color(UIColor(named: "grey40")!),
+            contrastBackgroundColor: Color(UIColor(named: "grey50")!),
             secondaryColor: Color(UIColor(named: "lightBlue50")!),
             bodyTextColor: Color(UIColor(named: "grey80")!),
             bodyTextColorAlt: Color(UIColor(named: "grey40")!),

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		50826ADD29AE226800365802 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50826ADC29AE226800365802 /* ButtonsView.swift */; };
 		50826ADF29AEBBD200365802 /* SearchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50826ADE29AEBBD200365802 /* SearchButtonView.swift */; };
+		50826B5129AFA44600365802 /* SearchSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50826B5029AFA44600365802 /* SearchSheetView.swift */; };
 		508889E428B94672008E1C56 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889E328B94672008E1C56 /* NetworkManager.swift */; };
 		508889E628B9492E008E1C56 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889E528B9492E008E1C56 /* PostData.swift */; };
 		508889E928B94FC6008E1C56 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889E828B94FC6008E1C56 /* DetailView.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		50826ADC29AE226800365802 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		50826ADE29AEBBD200365802 /* SearchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButtonView.swift; sourceTree = "<group>"; };
+		50826B5029AFA44600365802 /* SearchSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSheetView.swift; sourceTree = "<group>"; };
 		508889E328B94672008E1C56 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		508889E528B9492E008E1C56 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		508889E828B94FC6008E1C56 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				7C929F1B26977A8F002E9041 /* ContentView.swift */,
+				50826B5029AFA44600365802 /* SearchSheetView.swift */,
 				508889E828B94FC6008E1C56 /* DetailView.swift */,
 				508889EA28B9526A008E1C56 /* WebView.swift */,
 				503B880E28E1EFD300054884 /* UIComponents */,
@@ -331,6 +334,7 @@
 			files = (
 				508889E428B94672008E1C56 /* NetworkManager.swift in Sources */,
 				50826ADD29AE226800365802 /* ButtonsView.swift in Sources */,
+				50826B5129AFA44600365802 /* SearchSheetView.swift in Sources */,
 				508889E628B9492E008E1C56 /* PostData.swift in Sources */,
 				7C929F1C26977A8F002E9041 /* ContentView.swift in Sources */,
 				508889EB28B9526A008E1C56 /* WebView.swift in Sources */,
@@ -503,7 +507,7 @@
 				DEVELOPMENT_TEAM = MCVQ5TY7KR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HackerNewsApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,7 +530,7 @@
 				DEVELOPMENT_TEAM = MCVQ5TY7KR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HackerNewsApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -22,11 +22,11 @@ struct FilterButton: View {
                 hapticFB.impactOccurred()
         }) {
             Text(buttonText)
-                .font(.system(size: 17))
+                .font(.system(size: 23))
                 .fontWeight(.heavy)
                 .foregroundColor(currentTheme.buttonTextColor)
                 .padding(.horizontal, 8)
-                .padding(.vertical, 6)
+                .padding(.vertical, 8)
         }
         .background(currentTheme.brandColor) 
         .cornerRadius(5.0)

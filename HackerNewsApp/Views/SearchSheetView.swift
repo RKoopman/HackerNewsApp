@@ -9,7 +9,8 @@ import SwiftUI
 
 struct SearchSheetView: View {
     @Environment(\.dismiss) var dismiss
-    
+
+    @EnvironmentObject var networkManager: NetworkManager
     @State private var searchText: String = ""
     @State var currentTheme: Theme = themes[0]
 
@@ -19,9 +20,7 @@ struct SearchSheetView: View {
                 Text("Searching for \(searchText)")
             }
             .searchable(text: $searchText)
-
-            
-            
+            .onSubmit(of: .search, searchCall)
             
             Button("Press to dismiss") {
                 dismiss()
@@ -37,7 +36,11 @@ struct SearchSheetView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(currentTheme.backgroundColor)
     }
-        
+       
+    private func searchCall() {
+        networkManager.fetchData(callURL: SearchURLFormatter(searchText: searchText).formatURL(text: searchText))
+        dismiss()
+    }
 }
 
 struct SearchSheetView_Previews: PreviewProvider {

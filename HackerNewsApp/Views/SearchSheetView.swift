@@ -13,28 +13,44 @@ struct SearchSheetView: View {
     @EnvironmentObject var networkManager: NetworkManager
     @State private var searchText: String = ""
     @State var currentTheme: Theme = themes[0]
+//    @State var isHidden: Bool = true
 
     var body: some View {
-        VStack {
-            NavigationStack {
-                Text("Searching for \(searchText)")
-            }
-            .searchable(text: $searchText)
-            .onSubmit(of: .search, searchCall)
+        ZStack {
+//            if !isHidden {
+//                DimmedView()
+//            }
             
-            Button("Press to dismiss") {
-                dismiss()
+            VStack {
+                NavigationStack {
+                    Text("Searching for \(searchText)")
+                }
+                .searchable(text: $searchText)
+                .onSubmit(of: .search, searchCall)
+                
+                Button("Press to dismiss") {
+                    dismiss()
+                }
+                .font(.body)
+                .fontWeight(.semibold)
+                .padding(.horizontal, 30)
+                .padding(.vertical, 15)
+                .foregroundColor(currentTheme.buttonTextColor)
+                .background(currentTheme.contrastBackgroundColor)
+                .cornerRadius(20)
+//                .onAppear {
+//                    isHidden.toggle()
+//                    print("dimmed view is :: \(isHidden)")
+//                }
+//                .onDisappear {
+//                    isHidden.toggle()
+//                    print("dimmed view is :: \(isHidden)")
+//                }
             }
-            .font(.body)
-            .fontWeight(.semibold)
-            .padding(.horizontal, 30)
-            .padding(.vertical, 15)
-            .foregroundColor(currentTheme.buttonTextColor)
-            .background(currentTheme.contrastBackgroundColor)
-            .cornerRadius(20)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(currentTheme.backgroundColor)
+            
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(currentTheme.backgroundColor)
     }
        
     private func searchCall() {

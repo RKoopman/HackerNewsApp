@@ -32,7 +32,6 @@ struct ContentView: View {
                                     .foregroundColor(currentTheme.bodyTextColorAlt)
                             }
                         }
-                        
                     }
                 }
                 .navigationTitle("Hacker News")

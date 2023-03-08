@@ -29,8 +29,11 @@ struct SearchButtonView: View {
         .cornerRadius(5.0)
         .shadow(radius: 2)
         .sheet(isPresented: $showingSearchSheet) {
-            SearchSheetView()
-                .presentationDetents([.fraction(0.3)])
+            ZStack {
+                DimmedView()
+                SearchSheetView()
+                    .presentationDetents([.fraction(0.3)])
+            }
         }
     }
 }

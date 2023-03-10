@@ -15,6 +15,9 @@ struct ButtonsView: View {
         ScrollView(.horizontal, showsIndicators: true) {
             HStack {
                 SearchButtonView()
+                Text("|")
+                    .font(.system(size: 39, weight: .light, design: .serif))
+                    .foregroundColor(.gray)
                 filterManager.setupButton(for: .frontPage)
                 filterManager.setupButton(for: .latest)
                 filterManager.setupButton(for: .apple)

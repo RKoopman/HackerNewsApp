@@ -16,6 +16,15 @@ struct ContentView: View {
         
         NavigationView {
             VStack {
+                HStack {
+                    Text("Hacker News")
+                        .font(.title)
+                        .fontWeight(.heavy)
+                        .padding(12)
+                    
+                    Spacer()
+                }
+                
                 List(networkManager.posts) { post in
                     NavigationLink {
                         DetailView(url: post.url)
@@ -35,7 +44,6 @@ struct ContentView: View {
                         
                     }
                 }
-                .navigationTitle("Hacker News")
                 .listStyle(.plain)
                 .refreshable {
                     self.networkManager.reFetchData()

@@ -101,7 +101,6 @@
 			children = (
 				508889EE28BD5B5A008E1C56 /* FilterManager.swift */,
 				508889E328B94672008E1C56 /* NetworkManager.swift */,
-				507814DD29B3B28A005A92F7 /* SearchURLFormatter.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -116,6 +115,14 @@
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
+		507814E129B94DD8005A92F7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				507814DD29B3B28A005A92F7 /* SearchURLFormatter.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		508889E228B94659008E1C56 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +134,7 @@
 		508889E728B94FB4008E1C56 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				507814E129B94DD8005A92F7 /* Controllers */,
 				7C929F1B26977A8F002E9041 /* ContentView.swift */,
 				50826B5029AFA44600365802 /* SearchSheetView.swift */,
 				508889E828B94FC6008E1C56 /* DetailView.swift */,

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		507814DE29B3B28A005A92F7 /* SearchURLFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507814DD29B3B28A005A92F7 /* SearchURLFormatter.swift */; };
+		5055DC9D29BB915F00F697E8 /* SearchURLFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055DC9C29BB915F00F697E8 /* SearchURLFormatter.swift */; };
 		50826ADD29AE226800365802 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50826ADC29AE226800365802 /* ButtonsView.swift */; };
 		50826ADF29AEBBD200365802 /* SearchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50826ADE29AEBBD200365802 /* SearchButtonView.swift */; };
 		50826B5129AFA44600365802 /* SearchSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50826B5029AFA44600365802 /* SearchSheetView.swift */; };
@@ -45,7 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		507814DD29B3B28A005A92F7 /* SearchURLFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchURLFormatter.swift; sourceTree = "<group>"; };
+		5055DC9C29BB915F00F697E8 /* SearchURLFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchURLFormatter.swift; sourceTree = "<group>"; };
 		50826ADC29AE226800365802 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		50826ADE29AEBBD200365802 /* SearchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButtonView.swift; sourceTree = "<group>"; };
 		50826B5029AFA44600365802 /* SearchSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSheetView.swift; sourceTree = "<group>"; };
@@ -101,6 +101,7 @@
 			children = (
 				508889EE28BD5B5A008E1C56 /* FilterManager.swift */,
 				508889E328B94672008E1C56 /* NetworkManager.swift */,
+				5055DC9C29BB915F00F697E8 /* SearchURLFormatter.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -115,14 +116,6 @@
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
-		507814E129B94DD8005A92F7 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				507814DD29B3B28A005A92F7 /* SearchURLFormatter.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		508889E228B94659008E1C56 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +127,6 @@
 		508889E728B94FB4008E1C56 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				507814E129B94DD8005A92F7 /* Controllers */,
 				7C929F1B26977A8F002E9041 /* ContentView.swift */,
 				50826B5029AFA44600365802 /* SearchSheetView.swift */,
 				508889E828B94FC6008E1C56 /* DetailView.swift */,
@@ -351,7 +343,7 @@
 				508889EB28B9526A008E1C56 /* WebView.swift in Sources */,
 				50D3DE3F28F57E0800756248 /* Themes.swift in Sources */,
 				508889E928B94FC6008E1C56 /* DetailView.swift in Sources */,
-				507814DE29B3B28A005A92F7 /* SearchURLFormatter.swift in Sources */,
+				5055DC9D29BB915F00F697E8 /* SearchURLFormatter.swift in Sources */,
 				7C929F1A26977A8F002E9041 /* HackerNewsAppApp.swift in Sources */,
 				508889ED28BD5862008E1C56 /* FilterButton.swift in Sources */,
 				508889EF28BD5B5A008E1C56 /* FilterManager.swift in Sources */,

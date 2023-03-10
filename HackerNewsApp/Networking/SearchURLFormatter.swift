@@ -2,11 +2,10 @@
 //  SearchURLFormatter.swift
 //  HackerNewsApp
 //
-//  Created by R K on 3/4/23.
+//  Created by R K on 3/10/23.
 //
 
 import Foundation
-
 
 class SearchURLFormatter {
     

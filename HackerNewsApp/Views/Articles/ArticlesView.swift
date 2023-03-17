@@ -1,29 +1,21 @@
 //
-//  HackerView.swift
+//  ArticlesView.swift
 //  HackerNewsApp
 //
-//  Created by Raoul Koopman on 7/8/21.
+//  Created by R K on 3/17/23.
 //
 
 import SwiftUI
 
-struct HackerView: View {
+struct ArticlesView: View {
     
     @StateObject var networkManager = NetworkManager()
     @State var currentTheme: Theme = themes[0]
     
     var body: some View {
-        
         NavigationView {
             VStack {
-                HStack {
-                    Text("Hacker News")
-                        .font(.title)
-                        .fontWeight(.heavy)
-                        .padding(12)
-                    
-                    Spacer()
-                }
+                HeaderView(title: "Hacker News")
                 
                 List(networkManager.posts) { post in
                     NavigationLink {
@@ -88,8 +80,8 @@ struct HackerView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ArticlesView_Previews: PreviewProvider {
     static var previews: some View {
-        HackerView()
+        ArticlesView()
     }
 }

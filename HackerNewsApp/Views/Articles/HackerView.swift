@@ -22,7 +22,7 @@ struct HackerView: View {
                     Label("Articles", systemImage: "list.dash")
                 }
 
-            ArticlesView() // PLACE HOLDER :: becomes SavedArticlesView
+            SavedArticlesView()
                 .tabItem {
                     Label("Saved", systemImage: "star")
                 }

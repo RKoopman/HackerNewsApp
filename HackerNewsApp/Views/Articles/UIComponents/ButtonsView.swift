@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ButtonsView: View {
     
+    @State var currentTheme: Theme = themes[0]
     let filterManager = FilterManager.shared
 
     var body: some View {
@@ -17,7 +18,7 @@ struct ButtonsView: View {
                 SearchButtonView()
                 Text("|")
                     .font(.system(size: 39, weight: .light, design: .serif))
-                    .foregroundColor(.gray)
+                    .foregroundColor(currentTheme.bodyTextColorAlt)
                 filterManager.setupButton(for: .frontPage)
                 filterManager.setupButton(for: .latest)
                 filterManager.setupButton(for: .apple)

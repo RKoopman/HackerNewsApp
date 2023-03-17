@@ -14,18 +14,14 @@ struct HeaderView: View {
     var title: String
     
     var body: some View {
-        VStack {
-            HStack {
-                Text(title)
-                    .font(.title)
-                    .fontWeight(.heavy)
-                    .padding(.horizontal, 12)
-                    .foregroundColor(currentTheme.cellTitleTextColor)
-                
-                Spacer()
-            }
-            Text("____________________________________")
-                .foregroundColor(.gray)
+        HStack {
+            Text(title)
+                .font(.title)
+                .fontWeight(.heavy)
+                .padding(12)
+                .foregroundColor(currentTheme.cellTitleTextColor)
+            
+            Spacer()
         }
         .background(currentTheme.backgroundColor)
     }

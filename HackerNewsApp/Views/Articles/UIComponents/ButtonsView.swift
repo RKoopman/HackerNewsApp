@@ -24,10 +24,9 @@ struct ButtonsView: View {
                 filterManager.setupButton(for: .google)
                 filterManager.setupButton(for: .arVr)
             }
-            .padding(.bottom, 10)
+
         }
-        .padding(.horizontal, 10)
-        .padding(.bottom, 30)
+        .padding(10)
     }
 }
 

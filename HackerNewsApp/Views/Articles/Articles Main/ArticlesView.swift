@@ -10,6 +10,7 @@ import SwiftUI
 struct ArticlesView: View {
     
     @StateObject var networkManager = NetworkManager()
+    @ObservedObject var savedPosts: SavedPosts
     @State var currentTheme: Theme = themes[0]
     
     var body: some View {
@@ -38,6 +39,8 @@ struct ArticlesView: View {
                     .swipeActions(edge: .leading) {
                         Button(action: {
                             print("Favorite me")
+                            savedPosts.posts.append(post)
+                            print(savedPosts.posts)
                             
                         }) {
                             Image(systemName: "star", variableValue: 1.00)
@@ -49,26 +52,25 @@ struct ArticlesView: View {
                         .tint(currentTheme.contrastBackgroundColor)
                         
                     }
-                    .swipeActions(edge: .leading) {
-                        Button(action: {
-                            print("Unfavorite me")
-                            
-                        }) {
-                            Image(systemName: "star.slash", variableValue: 1.00)
-                                .symbolRenderingMode(.monochrome)
-                                .foregroundColor(Color.accentColor)
-                                .font(.system(size: 16, weight: .regular))
-                                .foregroundColor(currentTheme.buttonTextColor)
-                        }
-                        .tint(currentTheme.secondaryColor)
-                        
-                    }
+//                    .swipeActions(edge: .leading) {
+//                        Button(action: {
+//                            print("Unfavorite me")
+//
+//                        }) {
+//                            Image(systemName: "star.slash", variableValue: 1.00)
+//                                .symbolRenderingMode(.monochrome)
+//                                .foregroundColor(Color.accentColor)
+//                                .font(.system(size: 16, weight: .regular))
+//                                .foregroundColor(currentTheme.buttonTextColor)
+//                        }
+//                        .tint(currentTheme.secondaryColor)
+//                        
+//                    }
                 }
                 .listStyle(.plain)
                 .refreshable {
                     self.networkManager.reFetchData()
                 }
-                
                 ButtonsView()
             }
         }
@@ -80,8 +82,8 @@ struct ArticlesView: View {
     }
 }
 
-struct ArticlesView_Previews: PreviewProvider {
-    static var previews: some View {
-        ArticlesView()
-    }
-}
+//struct ArticlesView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ArticlesView()
+//    }
+//}

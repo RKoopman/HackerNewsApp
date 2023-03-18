@@ -11,6 +11,8 @@
 		505A9BE129C4F148004B5B07 /* ArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505A9BE029C4F148004B5B07 /* ArticlesView.swift */; };
 		505A9BE329C4F49E004B5B07 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505A9BE229C4F49E004B5B07 /* HeaderView.swift */; };
 		505A9BE629C4FCDE004B5B07 /* SavedArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505A9BE529C4FCDE004B5B07 /* SavedArticlesView.swift */; };
+		505A9BE829C502DF004B5B07 /* SavedPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505A9BE729C502DF004B5B07 /* SavedPosts.swift */; };
+		505A9BEA29C50B55004B5B07 /* EmptySavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505A9BE929C50B55004B5B07 /* EmptySavedView.swift */; };
 		50826ADD29AE226800365802 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50826ADC29AE226800365802 /* ButtonsView.swift */; };
 		50826ADF29AEBBD200365802 /* SearchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50826ADE29AEBBD200365802 /* SearchButtonView.swift */; };
 		50826B5129AFA44600365802 /* SearchSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50826B5029AFA44600365802 /* SearchSheetView.swift */; };
@@ -52,6 +54,8 @@
 		505A9BE029C4F148004B5B07 /* ArticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesView.swift; sourceTree = "<group>"; };
 		505A9BE229C4F49E004B5B07 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		505A9BE529C4FCDE004B5B07 /* SavedArticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedArticlesView.swift; sourceTree = "<group>"; };
+		505A9BE729C502DF004B5B07 /* SavedPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPosts.swift; sourceTree = "<group>"; };
+		505A9BE929C50B55004B5B07 /* EmptySavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySavedView.swift; sourceTree = "<group>"; };
 		50826ADC29AE226800365802 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		50826ADE29AEBBD200365802 /* SearchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButtonView.swift; sourceTree = "<group>"; };
 		50826B5029AFA44600365802 /* SearchSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSheetView.swift; sourceTree = "<group>"; };
@@ -112,32 +116,53 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		503B880E28E1EFD300054884 /* UIComponents */ = {
+		503B880E28E1EFD300054884 /* Articles Main */ = {
 			isa = PBXGroup;
 			children = (
+				505A9BE029C4F148004B5B07 /* ArticlesView.swift */,
+				50826B5029AFA44600365802 /* SearchSheetView.swift */,
 				508889EC28BD5862008E1C56 /* FilterButton.swift */,
 				50826ADC29AE226800365802 /* ButtonsView.swift */,
 				50826ADE29AEBBD200365802 /* SearchButtonView.swift */,
 			);
-			path = UIComponents;
+			path = "Articles Main";
 			sourceTree = "<group>";
 		};
 		505A9BE429C4F58C004B5B07 /* Articles */ = {
 			isa = PBXGroup;
 			children = (
 				7C929F1B26977A8F002E9041 /* HackerView.swift */,
-				505A9BE029C4F148004B5B07 /* ArticlesView.swift */,
-				505A9BE529C4FCDE004B5B07 /* SavedArticlesView.swift */,
-				50826B5029AFA44600365802 /* SearchSheetView.swift */,
-				503B880E28E1EFD300054884 /* UIComponents */,
+				503B880E28E1EFD300054884 /* Articles Main */,
+				506BD6BC29C607D500BDFE31 /* My Stuff */,
+				506BD6BB29C607B000BDFE31 /* Shared Components */,
 			);
 			path = Articles;
+			sourceTree = "<group>";
+		};
+		506BD6BB29C607B000BDFE31 /* Shared Components */ = {
+			isa = PBXGroup;
+			children = (
+				505A9BE229C4F49E004B5B07 /* HeaderView.swift */,
+				508889E828B94FC6008E1C56 /* DetailView.swift */,
+				508889EA28B9526A008E1C56 /* WebView.swift */,
+			);
+			path = "Shared Components";
+			sourceTree = "<group>";
+		};
+		506BD6BC29C607D500BDFE31 /* My Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				505A9BE529C4FCDE004B5B07 /* SavedArticlesView.swift */,
+				505A9BE929C50B55004B5B07 /* EmptySavedView.swift */,
+			);
+			path = "My Stuff";
 			sourceTree = "<group>";
 		};
 		508889E228B94659008E1C56 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				508889E528B9492E008E1C56 /* PostData.swift */,
+				505A9BE729C502DF004B5B07 /* SavedPosts.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,9 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				505A9BE429C4F58C004B5B07 /* Articles */,
-				505A9BE229C4F49E004B5B07 /* HeaderView.swift */,
-				508889E828B94FC6008E1C56 /* DetailView.swift */,
-				508889EA28B9526A008E1C56 /* WebView.swift */,
 				50D3DE3D28F57DE000756248 /* Themes */,
 			);
 			path = Views;
@@ -195,12 +217,12 @@
 		7C929F1826977A8F002E9041 /* HackerNewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				7C929F1926977A8F002E9041 /* HackerNewsAppApp.swift */,
+				7C929F2226977A90002E9041 /* Info.plist */,
 				508889E728B94FB4008E1C56 /* Views */,
 				508889E228B94659008E1C56 /* Models */,
 				503B880D28E1EF7C00054884 /* Networking */,
-				7C929F1926977A8F002E9041 /* HackerNewsAppApp.swift */,
 				50D3DE3C28F57D2100756248 /* Assets and Colors */,
-				7C929F2226977A90002E9041 /* Info.plist */,
 			);
 			path = HackerNewsApp;
 			sourceTree = "<group>";
@@ -353,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				508889E428B94672008E1C56 /* NetworkManager.swift in Sources */,
+				505A9BE829C502DF004B5B07 /* SavedPosts.swift in Sources */,
 				50826ADD29AE226800365802 /* ButtonsView.swift in Sources */,
 				50826B5129AFA44600365802 /* SearchSheetView.swift in Sources */,
 				508889E628B9492E008E1C56 /* PostData.swift in Sources */,
@@ -364,6 +387,7 @@
 				5055DC9D29BB915F00F697E8 /* SearchURLFormatter.swift in Sources */,
 				7C929F1A26977A8F002E9041 /* HackerNewsAppApp.swift in Sources */,
 				508889ED28BD5862008E1C56 /* FilterButton.swift in Sources */,
+				505A9BEA29C50B55004B5B07 /* EmptySavedView.swift in Sources */,
 				508889EF28BD5B5A008E1C56 /* FilterManager.swift in Sources */,
 				505A9BE129C4F148004B5B07 /* ArticlesView.swift in Sources */,
 				50826ADF29AEBBD200365802 /* SearchButtonView.swift in Sources */,

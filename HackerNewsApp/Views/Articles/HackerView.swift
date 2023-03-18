@@ -10,6 +10,7 @@ import SwiftUI
 struct HackerView: View {
     
     @State var currentTheme: Theme = themes[0]
+    @StateObject var savedPosts = SavedPosts()
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor(currentTheme.backgroundColor)
@@ -17,12 +18,12 @@ struct HackerView: View {
     
     var body: some View {
         TabView {
-            ArticlesView()
+            ArticlesView(savedPosts: savedPosts)
                 .tabItem {
                     Label("Articles", systemImage: "list.dash")
                 }
 
-            SavedArticlesView()
+            SavedArticlesView(savedPosts: savedPosts)
                 .tabItem {
                     Label("Saved", systemImage: "star")
                 }

@@ -22,19 +22,18 @@ struct SearchSheetView: View {
             .searchable(text: $searchText)
             .onSubmit(of: .search, searchCall)
             
-            Button("Press to dismiss") {
+            Button("Dismiss") {
                 dismiss()
             }
-            .font(.body)
-            .fontWeight(.semibold)
-            .padding(.horizontal, 30)
-            .padding(.vertical, 15)
-            .foregroundColor(currentTheme.buttonTextColor)
-            .background(currentTheme.contrastBackgroundColor)
-            .cornerRadius(20)
+            .font(.system(size: 23))
+            .fontWeight(.heavy)
+            .foregroundColor(.white)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 8)
+            .background(.red)
+            .cornerRadius(5.0)
+            .shadow(radius: 2)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(currentTheme.backgroundColor)
     }
        
     private func searchCall() {

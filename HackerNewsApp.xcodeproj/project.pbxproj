@@ -20,6 +20,8 @@
 		50D3DE3B28E8F67700756248 /* HackerColorCatalog.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D3DE3A28E8F67700756248 /* HackerColorCatalog.xcassets */; };
 		50D3DE3F28F57E0800756248 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D3DE3E28F57E0800756248 /* Themes.swift */; };
 		50D3DE4128F5883E00756248 /* Colors+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D3DE4028F5883E00756248 /* Colors+Extensions.swift */; };
+		50E5BA392A5763A100795548 /* SearchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E5BA382A5763A100795548 /* SearchHistoryView.swift */; };
+		50E5BA3B2A5765BA00795548 /* SearchResultsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E5BA3A2A5765BA00795548 /* SearchResultsButtonView.swift */; };
 		7C929F1A26977A8F002E9041 /* HackerNewsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929F1926977A8F002E9041 /* HackerNewsAppApp.swift */; };
 		7C929F1C26977A8F002E9041 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929F1B26977A8F002E9041 /* ContentView.swift */; };
 		7C929F1E26977A90002E9041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C929F1D26977A90002E9041 /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		50D3DE3A28E8F67700756248 /* HackerColorCatalog.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HackerColorCatalog.xcassets; sourceTree = "<group>"; };
 		50D3DE3E28F57E0800756248 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		50D3DE4028F5883E00756248 /* Colors+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Extensions.swift"; sourceTree = "<group>"; };
+		50E5BA382A5763A100795548 /* SearchHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryView.swift; sourceTree = "<group>"; };
+		50E5BA3A2A5765BA00795548 /* SearchResultsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsButtonView.swift; sourceTree = "<group>"; };
 		7C929F1626977A8F002E9041 /* HackerNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C929F1926977A8F002E9041 /* HackerNewsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsAppApp.swift; sourceTree = "<group>"; };
 		7C929F1B26977A8F002E9041 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,9 +113,11 @@
 		503B880E28E1EFD300054884 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				50826ADE29AEBBD200365802 /* SearchButtonView.swift */,
 				508889EC28BD5862008E1C56 /* FilterButton.swift */,
 				50826ADC29AE226800365802 /* ButtonsView.swift */,
-				50826ADE29AEBBD200365802 /* SearchButtonView.swift */,
+				50E5BA382A5763A100795548 /* SearchHistoryView.swift */,
+				50E5BA3A2A5765BA00795548 /* SearchResultsButtonView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -128,8 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				7C929F1B26977A8F002E9041 /* ContentView.swift */,
-				50826B5029AFA44600365802 /* SearchSheetView.swift */,
 				508889E828B94FC6008E1C56 /* DetailView.swift */,
+				50826B5029AFA44600365802 /* SearchSheetView.swift */,
 				508889EA28B9526A008E1C56 /* WebView.swift */,
 				503B880E28E1EFD300054884 /* UIComponents */,
 				50D3DE3D28F57DE000756248 /* Themes */,
@@ -337,10 +343,12 @@
 			files = (
 				508889E428B94672008E1C56 /* NetworkManager.swift in Sources */,
 				50826ADD29AE226800365802 /* ButtonsView.swift in Sources */,
+				50E5BA392A5763A100795548 /* SearchHistoryView.swift in Sources */,
 				50826B5129AFA44600365802 /* SearchSheetView.swift in Sources */,
 				508889E628B9492E008E1C56 /* PostData.swift in Sources */,
 				7C929F1C26977A8F002E9041 /* ContentView.swift in Sources */,
 				508889EB28B9526A008E1C56 /* WebView.swift in Sources */,
+				50E5BA3B2A5765BA00795548 /* SearchResultsButtonView.swift in Sources */,
 				50D3DE3F28F57E0800756248 /* Themes.swift in Sources */,
 				508889E928B94FC6008E1C56 /* DetailView.swift in Sources */,
 				5055DC9D29BB915F00F697E8 /* SearchURLFormatter.swift in Sources */,
@@ -435,7 +443,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -490,7 +498,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -16,25 +16,29 @@ struct SavedArticlesView: View {
         VStack {
             HeaderView(title: "Saved Articles")
             
-            List(savedPosts.posts) { post in
-                    NavigationLink {
-                        DetailView(url: post.url)
-                    } label: {
-                        HStack {
-                            Text(String(post.points))
-                                .padding(.horizontal, 3)
-                            VStack(alignment: .leading) {
-                                Text(post.title)
-                                    .foregroundColor(currentTheme.cellTitleTextColor)
-                                Text(String(post.url ?? " "))
-                                    .font(.system(size: 10))
-                                    .lineLimit(1)
-                                    .foregroundColor(currentTheme.bodyTextColorAlt)
+            if savedPosts.posts.count == 0 {
+                EmptySavedView()
+            } else {
+                List(savedPosts.posts) { post in
+                        NavigationLink {
+                            DetailView(url: post.url)
+                        } label: {
+                            HStack {
+                                Text(String(post.points))
+                                    .padding(.horizontal, 3)
+                                VStack(alignment: .leading) {
+                                    Text(post.title)
+                                        .foregroundColor(currentTheme.cellTitleTextColor)
+                                    Text(String(post.url ?? " "))
+                                        .font(.system(size: 10))
+                                        .lineLimit(1)
+                                        .foregroundColor(currentTheme.bodyTextColorAlt)
+                                }
                             }
                         }
                     }
-                }
-                .listStyle(.plain)
+                    .listStyle(.plain)
+            }
             }
         }
     }

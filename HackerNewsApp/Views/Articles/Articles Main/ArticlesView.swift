@@ -45,27 +45,12 @@ struct ArticlesView: View {
                         }) {
                             Image(systemName: "star", variableValue: 1.00)
                                 .symbolRenderingMode(.monochrome)
-                                .foregroundColor(Color.accentColor)
                                 .font(.system(size: 16, weight: .regular))
                                 .foregroundColor(currentTheme.buttonTextColor)
                         }
                         .tint(currentTheme.contrastBackgroundColor)
                         
                     }
-//                    .swipeActions(edge: .leading) {
-//                        Button(action: {
-//                            print("Unfavorite me")
-//
-//                        }) {
-//                            Image(systemName: "star.slash", variableValue: 1.00)
-//                                .symbolRenderingMode(.monochrome)
-//                                .foregroundColor(Color.accentColor)
-//                                .font(.system(size: 16, weight: .regular))
-//                                .foregroundColor(currentTheme.buttonTextColor)
-//                        }
-//                        .tint(currentTheme.secondaryColor)
-//                        
-//                    }
                 }
                 .listStyle(.plain)
                 .refreshable {

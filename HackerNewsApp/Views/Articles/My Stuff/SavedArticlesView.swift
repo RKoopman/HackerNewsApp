@@ -17,7 +17,9 @@ struct SavedArticlesView: View {
             HeaderView(title: "Saved Articles")
             
             if savedPosts.posts.count == 0 {
-                EmptySavedView()
+                InfoBlurb(instruction: "Swipe right on articles to save them for later.")
+                    .padding(.horizontal)
+                Spacer()
             } else {
                 List(savedPosts.posts) { post in
                         NavigationLink {
@@ -36,16 +38,32 @@ struct SavedArticlesView: View {
                                 }
                             }
                         }
+                        .swipeActions(edge: .leading) {
+                            Button(action: {
+                                print("Unfavorite me")
+
+                            }) {
+                                Image(systemName: "star.slash", variableValue: 1.00)
+                                    .symbolRenderingMode(.monochrome)
+                                    .foregroundColor(Color.accentColor)
+                                    .font(.system(size: 16, weight: .regular))
+                                    .foregroundColor(currentTheme.buttonTextColor)
+                            }
+                            .tint(currentTheme.secondaryColor)
+                        }
                     }
-                    .listStyle(.plain)
-            }
+                .listStyle(.plain)
+                InfoBlurb(instruction: "Swipe right on articles to remove them.")
+                    .padding(.horizontal)
+                Spacer()
             }
         }
     }
+}
 
 
 //struct SavedArticlesView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        SavedArticlesView(savedPosts: SavedPosts)
+//        SavedArticlesView(savedPosts: SavedPosts.)
 //    }
 //}

@@ -14,7 +14,6 @@ struct InfoBlurb: View {
     
     var body: some View {
         VStack {
-            Spacer()
             Divider()
                 .frame(height: 1)
                 .overlay(.gray)
@@ -28,13 +27,11 @@ struct InfoBlurb: View {
                 Text(instruction)
                     .frame(width: 180)
                     .padding()
-                Spacer()
             }
             .padding(.horizontal)
             Divider()
                 .frame(height: 1)
                 .overlay(.gray)
-//            Spacer()
         }
     }
 }

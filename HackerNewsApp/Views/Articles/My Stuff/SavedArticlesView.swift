@@ -17,6 +17,7 @@ struct SavedArticlesView: View {
             HeaderView(title: "Saved Articles")
             
             if savedPosts.posts.count == 0 {
+                Spacer()
                 InfoBlurb(instruction: "Swipe right on articles to save them for later.")
                     .padding(.horizontal)
                 Spacer()

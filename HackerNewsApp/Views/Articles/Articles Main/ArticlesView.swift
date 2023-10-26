@@ -22,19 +22,7 @@ struct ArticlesView: View {
                     NavigationLink {
                         DetailView(url: post.url)
                     } label: {
-                        HStack {
-                            Text(String(post.points))
-                                .padding(.horizontal, 3)
-                            VStack(alignment: .leading) {
-                                Text(post.title)
-                                    .foregroundColor(currentTheme.cellTitleTextColor)
-                                Text(String(post.url ?? " "))
-                                    .font(.system(size: 10))
-                                    .lineLimit(1)
-                                    .foregroundColor(currentTheme.bodyTextColorAlt)
-                            }
-                        }
-                        
+                        ArticleCell(points: post.points, title: post.title, url: post.url)
                     }
                     .swipeActions(edge: .leading) {
                         Button(action: {

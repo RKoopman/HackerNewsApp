@@ -22,7 +22,7 @@ struct ArticleCell: View {
             VStack(alignment: .leading) {
                 Text(title)
                     .foregroundColor(currentTheme.cellTitleTextColor)
-                Text(String(url!))
+                Text(url!)
                     .font(.system(size: 10))
                     .lineLimit(1)
                     .foregroundColor(currentTheme.bodyTextColorAlt)

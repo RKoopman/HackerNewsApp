@@ -22,7 +22,7 @@ struct SearchSheetView: View {
             .searchable(text: $searchText)
             .onSubmit(of: .search, searchCall)
             
-            Button("Press to dismiss") {
+            Button("Dismiss") {
                 dismiss()
             }
             .font(.body)

@@ -36,7 +36,7 @@ struct ArticlesView: View {
                                 .font(.system(size: 16, weight: .regular))
                                 .foregroundColor(currentTheme.buttonTextColor)
                         }
-                        .tint(currentTheme.contrastBackgroundColor)
+                        .tint(currentTheme.buttonContructiveColor)
                         
                     }
                 }

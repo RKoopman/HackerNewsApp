@@ -31,15 +31,15 @@ struct SavedArticlesView: View {
                         .swipeActions(edge: .leading) {
                             Button(action: {
                                 print("Unfavorite me")
+                                savedPosts.remove(item: post)
 
                             }) {
                                 Image(systemName: "star.slash", variableValue: 1.00)
                                     .symbolRenderingMode(.monochrome)
                                     .foregroundColor(Color.accentColor)
                                     .font(.system(size: 16, weight: .regular))
-                                    .foregroundColor(currentTheme.buttonTextColor)
                             }
-                            .tint(currentTheme.secondaryColor)
+                            .tint(currentTheme.buttonDestructiveColor)
                         }
                     }
                 .listStyle(.plain)

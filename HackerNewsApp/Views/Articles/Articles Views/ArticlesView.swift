@@ -17,6 +17,7 @@ struct ArticlesView: View {
         NavigationView {
             VStack {
                 HeaderView(title: "Hacker News")
+                    .padding(.bottom, -8)
                 
                 List(networkManager.posts) { post in
                     NavigationLink {

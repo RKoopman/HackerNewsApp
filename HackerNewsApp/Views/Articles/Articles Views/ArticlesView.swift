@@ -48,6 +48,7 @@ struct ArticlesView: View {
                     self.networkManager.reFetchData()
                 }
                 ButtonsView()
+                    .padding(.top, -8)
             }
         }
         .environmentObject(networkManager)

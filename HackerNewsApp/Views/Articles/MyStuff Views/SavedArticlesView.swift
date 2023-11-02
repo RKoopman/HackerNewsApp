@@ -15,6 +15,7 @@ struct SavedArticlesView: View {
     var body: some View {
         VStack {
             HeaderView(title: "Saved Articles")
+                .padding(.bottom, -8)
             
             if savedPosts.posts.count == 0 {
                 Spacer()

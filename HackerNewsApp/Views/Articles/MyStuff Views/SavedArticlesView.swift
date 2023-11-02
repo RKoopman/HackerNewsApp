@@ -15,6 +15,7 @@ struct SavedArticlesView: View {
     var body: some View {
         VStack {
             HeaderView(title: "Saved Articles")
+                .padding(.bottom, -8)
             
             if savedPosts.posts.count == 0 {
                 Spacer()
@@ -41,8 +42,10 @@ struct SavedArticlesView: View {
                             }
                             .tint(currentTheme.buttonDestructiveColor)
                         }
+                        .listRowBackground(Color.clear)
                     }
                 .listStyle(.plain)
+                .background(currentTheme.backgroundColor)
                 InfoBlurb(instruction: "Swipe right on articles to remove them.")
                     .padding(.horizontal)
                 Spacer()

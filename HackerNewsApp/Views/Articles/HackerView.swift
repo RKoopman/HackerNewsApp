@@ -28,7 +28,7 @@ struct HackerView: View {
                     Label("Saved", systemImage: "star")
                 }
         }
-        .accentColor(currentTheme.brandColor)
+        .accentColor(currentTheme.brandColor) // tabbar icon colors
 //        .onShake {
 //            print("open settings")
 //            HalfSettingsView()

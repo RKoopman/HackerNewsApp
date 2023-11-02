@@ -17,6 +17,7 @@ struct ArticlesView: View {
         NavigationView {
             VStack {
                 HeaderView(title: "Hacker News")
+                    .padding(.bottom, -8)
                 
                 List(networkManager.posts) { post in
                     NavigationLink {
@@ -39,12 +40,15 @@ struct ArticlesView: View {
                         .tint(currentTheme.buttonContructiveColor)
                         
                     }
+                    .listRowBackground(Color.clear)
                 }
                 .listStyle(.plain)
+                .background(currentTheme.backgroundColor)
                 .refreshable {
                     self.networkManager.reFetchData()
                 }
                 ButtonsView()
+                    .padding(.top, -8)
             }
         }
         .environmentObject(networkManager)

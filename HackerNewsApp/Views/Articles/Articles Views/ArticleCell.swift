@@ -28,7 +28,6 @@ struct ArticleCell: View {
                     .foregroundColor(currentTheme.bodyTextColorAlt)
             }
         }
-
     }
 }
 

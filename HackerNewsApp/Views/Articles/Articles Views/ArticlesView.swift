@@ -39,8 +39,10 @@ struct ArticlesView: View {
                         .tint(currentTheme.buttonContructiveColor)
                         
                     }
+                    .listRowBackground(Color.clear)
                 }
                 .listStyle(.plain)
+                .background(currentTheme.backgroundColor)
                 .refreshable {
                     self.networkManager.reFetchData()
                 }

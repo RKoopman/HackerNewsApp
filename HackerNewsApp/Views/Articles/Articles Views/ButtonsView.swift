@@ -16,6 +16,7 @@ struct ButtonsView: View {
         ScrollView(.horizontal, showsIndicators: true) {
             HStack {
                 SearchButtonView()
+                    .padding(.leading, 10)
                 Text("|")
                     .font(.system(size: 39, weight: .light, design: .serif))
                     .foregroundColor(currentTheme.bodyTextColorAlt)
@@ -25,9 +26,9 @@ struct ButtonsView: View {
                 filterManager.setupButton(for: .google)
                 filterManager.setupButton(for: .arVr)
             }
-
+            .padding(.top, 10)
         }
-        .padding(10)
+        .background(currentTheme.backgroundColor)
     }
 }
 

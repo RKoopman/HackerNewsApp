@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5017A9162AF3DEDB00E914D8 /* HalfSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5017A9152AF3DEDB00E914D8 /* HalfSettingsView.swift */; };
+		5017A9192AF3E7E500E914D8 /* ThemeCollapsedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5017A9182AF3E7E500E914D8 /* ThemeCollapsedView.swift */; };
+		5017A91B2AF3E86000E914D8 /* ThemeExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5017A91A2AF3E86000E914D8 /* ThemeExpandedView.swift */; };
+		5017A91D2AF3EA8A00E914D8 /* View Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5017A91C2AF3EA8A00E914D8 /* View Extension.swift */; };
 		5021985A2AE4675F006C1DAC /* InfoBlurb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502198592AE4675F006C1DAC /* InfoBlurb.swift */; };
 		503C0A522AEAD5DF00CC83BA /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503C0A512AEAD5DF00CC83BA /* ArticleCell.swift */; };
 		5055DC9D29BB915F00F697E8 /* SearchURLFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055DC9C29BB915F00F697E8 /* SearchURLFormatter.swift */; };
@@ -51,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5017A9152AF3DEDB00E914D8 /* HalfSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSettingsView.swift; sourceTree = "<group>"; };
+		5017A9182AF3E7E500E914D8 /* ThemeCollapsedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollapsedView.swift; sourceTree = "<group>"; };
+		5017A91A2AF3E86000E914D8 /* ThemeExpandedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeExpandedView.swift; sourceTree = "<group>"; };
+		5017A91C2AF3EA8A00E914D8 /* View Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View Extension.swift"; sourceTree = "<group>"; };
 		502198592AE4675F006C1DAC /* InfoBlurb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBlurb.swift; sourceTree = "<group>"; };
 		503C0A512AEAD5DF00CC83BA /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		5055DC9C29BB915F00F697E8 /* SearchURLFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchURLFormatter.swift; sourceTree = "<group>"; };
@@ -108,6 +116,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5017A9172AF3E71200E914D8 /* Settings Views */ = {
+			isa = PBXGroup;
+			children = (
+				5017A9152AF3DEDB00E914D8 /* HalfSettingsView.swift */,
+				5017A9182AF3E7E500E914D8 /* ThemeCollapsedView.swift */,
+				5017A91A2AF3E86000E914D8 /* ThemeExpandedView.swift */,
+			);
+			path = "Settings Views";
+			sourceTree = "<group>";
+		};
 		503B880D28E1EF7C00054884 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +136,7 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		503B880E28E1EFD300054884 /* Articles Main */ = {
+		503B880E28E1EFD300054884 /* Articles Views */ = {
 			isa = PBXGroup;
 			children = (
 				505A9BE029C4F148004B5B07 /* ArticlesView.swift */,
@@ -128,16 +146,17 @@
 				50826ADC29AE226800365802 /* ButtonsView.swift */,
 				50826ADE29AEBBD200365802 /* SearchButtonView.swift */,
 			);
-			path = "Articles Main";
+			path = "Articles Views";
 			sourceTree = "<group>";
 		};
 		505A9BE429C4F58C004B5B07 /* Articles */ = {
 			isa = PBXGroup;
 			children = (
 				7C929F1B26977A8F002E9041 /* HackerView.swift */,
-				503B880E28E1EFD300054884 /* Articles Main */,
-				506BD6BC29C607D500BDFE31 /* My Stuff */,
+				503B880E28E1EFD300054884 /* Articles Views */,
+				506BD6BC29C607D500BDFE31 /* MyStuff Views */,
 				506BD6BB29C607B000BDFE31 /* Shared Components */,
+				5017A91C2AF3EA8A00E914D8 /* View Extension.swift */,
 			);
 			path = Articles;
 			sourceTree = "<group>";
@@ -152,13 +171,13 @@
 			path = "Shared Components";
 			sourceTree = "<group>";
 		};
-		506BD6BC29C607D500BDFE31 /* My Stuff */ = {
+		506BD6BC29C607D500BDFE31 /* MyStuff Views */ = {
 			isa = PBXGroup;
 			children = (
 				505A9BE529C4FCDE004B5B07 /* SavedArticlesView.swift */,
 				502198592AE4675F006C1DAC /* InfoBlurb.swift */,
 			);
-			path = "My Stuff";
+			path = "MyStuff Views";
 			sourceTree = "<group>";
 		};
 		508889E228B94659008E1C56 /* Models */ = {
@@ -174,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				505A9BE429C4F58C004B5B07 /* Articles */,
-				50D3DE3D28F57DE000756248 /* Themes */,
+				5017A9172AF3E71200E914D8 /* Settings Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +210,7 @@
 		50D3DE3D28F57DE000756248 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
+				50D3DE3C28F57D2100756248 /* Assets and Colors */,
 				50D3DE3E28F57E0800756248 /* Themes.swift */,
 				50D3DE4028F5883E00756248 /* Colors+Extensions.swift */,
 			);
@@ -225,7 +245,7 @@
 				508889E728B94FB4008E1C56 /* Views */,
 				508889E228B94659008E1C56 /* Models */,
 				503B880D28E1EF7C00054884 /* Networking */,
-				50D3DE3C28F57D2100756248 /* Assets and Colors */,
+				50D3DE3D28F57DE000756248 /* Themes */,
 			);
 			path = HackerNewsApp;
 			sourceTree = "<group>";
@@ -378,9 +398,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5017A9162AF3DEDB00E914D8 /* HalfSettingsView.swift in Sources */,
 				508889E428B94672008E1C56 /* NetworkManager.swift in Sources */,
 				505A9BE829C502DF004B5B07 /* SavedPosts.swift in Sources */,
 				50826ADD29AE226800365802 /* ButtonsView.swift in Sources */,
+				5017A9192AF3E7E500E914D8 /* ThemeCollapsedView.swift in Sources */,
 				50826B5129AFA44600365802 /* SearchSheetView.swift in Sources */,
 				508889E628B9492E008E1C56 /* PostData.swift in Sources */,
 				7C929F1C26977A8F002E9041 /* HackerView.swift in Sources */,
@@ -391,11 +413,13 @@
 				508889E928B94FC6008E1C56 /* DetailView.swift in Sources */,
 				5055DC9D29BB915F00F697E8 /* SearchURLFormatter.swift in Sources */,
 				7C929F1A26977A8F002E9041 /* HackerNewsAppApp.swift in Sources */,
+				5017A91D2AF3EA8A00E914D8 /* View Extension.swift in Sources */,
 				508889ED28BD5862008E1C56 /* FilterButton.swift in Sources */,
 				5021985A2AE4675F006C1DAC /* InfoBlurb.swift in Sources */,
 				508889EF28BD5B5A008E1C56 /* FilterManager.swift in Sources */,
 				505A9BE129C4F148004B5B07 /* ArticlesView.swift in Sources */,
 				50826ADF29AEBBD200365802 /* SearchButtonView.swift in Sources */,
+				5017A91B2AF3E86000E914D8 /* ThemeExpandedView.swift in Sources */,
 				50D3DE4128F5883E00756248 /* Colors+Extensions.swift in Sources */,
 				505A9BE329C4F49E004B5B07 /* HeaderView.swift in Sources */,
 			);

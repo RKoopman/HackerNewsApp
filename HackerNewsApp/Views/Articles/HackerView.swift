@@ -29,6 +29,10 @@ struct HackerView: View {
                 }
         }
         .accentColor(currentTheme.brandColor)
+//        .onShake {
+//            print("open settings")
+//            HalfSettingsView()
+//        }
     }
 }
 

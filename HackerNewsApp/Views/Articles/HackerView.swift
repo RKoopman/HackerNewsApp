@@ -11,28 +11,34 @@ struct HackerView: View {
     
     @State var currentTheme: Theme = themes[0]
     @StateObject var savedPosts = SavedPosts()
+    @State var isSettingsShown:Bool = false
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor(currentTheme.backgroundColor)
     }
     
     var body: some View {
-        TabView {
-            ArticlesView(savedPosts: savedPosts)
-                .tabItem {
-                    Label("Articles", systemImage: "list.dash")
-                }
+            TabView {
+                ArticlesView(savedPosts: savedPosts)
+                    .tabItem {
+                        Label("Articles", systemImage: "list.dash")
+                    }
 
-            SavedArticlesView(savedPosts: savedPosts)
-                .tabItem {
-                    Label("Saved", systemImage: "star")
-                }
-        }
-        .accentColor(currentTheme.brandColor) // tabbar icon colors
-//        .onShake {
-//            print("open settings")
-//            HalfSettingsView()
-//        }
+                SavedArticlesView(savedPosts: savedPosts)
+                    .tabItem {
+                        Label("Saved", systemImage: "star")
+                    }
+            }
+            .accentColor(currentTheme.brandColor) // tabbar icon colors
+            .onShake {
+                isSettingsShown.toggle()
+                print(isSettingsShown)
+            }
+            .sheet(isPresented: $isSettingsShown) {
+                HalfSettingsView()
+                    .presentationDetents([.fraction(0.3)])
+                    
+            }
     }
 }
 

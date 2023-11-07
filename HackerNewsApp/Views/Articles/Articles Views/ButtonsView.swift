@@ -26,7 +26,7 @@ struct ButtonsView: View {
                 filterManager.setupButton(for: .google)
                 filterManager.setupButton(for: .arVr)
             }
-            .padding(.top, 10)
+            .padding(.vertical, 10)
         }
         .background(currentTheme.backgroundColor)
     }

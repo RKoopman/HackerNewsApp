@@ -27,7 +27,7 @@ struct SavedArticlesView: View {
                         NavigationLink {
                             DetailView(url: post.url)
                         } label: {
-                            ArticleCell(points: post.points, title: post.title, url: post.url)
+                            ArticleCell(points: post.points, title: post.title, url: post.url ?? " ")
                         }
                         .swipeActions(edge: .leading) {
                             Button(action: {

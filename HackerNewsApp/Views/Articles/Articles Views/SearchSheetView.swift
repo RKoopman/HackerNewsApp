@@ -16,13 +16,32 @@ struct SearchSheetView: View {
 
     var body: some View {
         VStack {
-            NavigationStack {
-                Text("Searching for \(searchText)")
-            }
+//            NavigationStack {
+//                Text("Searching for \(searchText)")
+//            }
 //            TextField("Seach", text: $searchText)
-                .searchable(text: $searchText)
-                .onSubmit(of: .search, searchCall)
-//                .background(.red)
+//                .searchable(text: $searchText)
+//                .onSubmit(of: .search, searchCall)
+////                .background(.red)
+            NavigationStack {
+                VStack {
+                    TextField("Seach . . . ", text: $searchText)
+                        .font(.title)
+                        .fontWeight(.medium)
+                        .padding(.horizontal)
+                        .padding(.bottom)
+//                        .onSubmit(of: .search, searchCall)
+                        .onSubmit {
+                            searchCall()
+                            dismiss()
+                        }
+                    Divider()
+                        .frame(height: 1)
+                        .overlay(.gray)
+                        .padding(.horizontal)
+                }
+            }
+            
 //            1.  setup TextField with no searchable() - for something more custom, remove NavigationStack{...}
 //            2.  inject that same string ($searchText) into searchCall
 //            3.  edit search sheet

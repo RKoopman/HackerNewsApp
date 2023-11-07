@@ -26,7 +26,7 @@ struct HackerView: View {
 
                 SavedArticlesView(savedPosts: savedPosts)
                     .tabItem {
-                        Label("Saved", systemImage: "star")
+                        Label("Saved", systemImage: "bookmark.circle")
                     }
             }
             .accentColor(currentTheme.brandColor) // tabbar icon colors
@@ -37,7 +37,6 @@ struct HackerView: View {
             .sheet(isPresented: $isSettingsShown) {
                 HalfSettingsView()
                     .presentationDetents([.fraction(0.3)])
-                    
             }
     }
 }

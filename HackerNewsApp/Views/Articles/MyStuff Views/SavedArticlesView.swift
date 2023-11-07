@@ -35,7 +35,7 @@ struct SavedArticlesView: View {
                                 savedPosts.remove(item: post)
 
                             }) {
-                                Image(systemName: "star.slash", variableValue: 1.00)
+                                Image(systemName: "bookmark.slash", variableValue: 1.00)
                                     .symbolRenderingMode(.monochrome)
                                     .foregroundColor(Color.accentColor)
                                     .font(.system(size: 16, weight: .regular))

@@ -32,13 +32,12 @@ struct ArticlesView: View {
                             print(savedPosts.posts)
                             
                         }) {
-                            Image(systemName: "star", variableValue: 1.00)
+                            Image(systemName: "bookmark", variableValue: 1.00)
                                 .symbolRenderingMode(.monochrome)
                                 .font(.system(size: 16, weight: .regular))
                                 .foregroundColor(currentTheme.buttonTextColor)
                         }
                         .tint(currentTheme.buttonContructiveColor)
-                        
                     }
                     .listRowBackground(Color.clear)
                 }

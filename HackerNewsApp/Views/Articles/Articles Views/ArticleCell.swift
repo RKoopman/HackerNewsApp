@@ -13,7 +13,7 @@ struct ArticleCell: View {
 
     var points:Int
     var title:String
-    var url:String? = " "
+    var url:String
     
     var body: some View {
         HStack {
@@ -22,7 +22,7 @@ struct ArticleCell: View {
             VStack(alignment: .leading) {
                 Text(title)
                     .foregroundColor(currentTheme.cellTitleTextColor)
-                Text(url!)
+                Text(url)
                     .font(.system(size: 10))
                     .lineLimit(1)
                     .foregroundColor(currentTheme.bodyTextColorAlt)

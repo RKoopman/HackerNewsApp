@@ -8,10 +8,17 @@
 import SwiftUI
 
 struct HalfSettingsView: View {
+    
+    @State var currentTheme: Theme = themes[0]
+    
     var body: some View {
         VStack {
-            Text("Settings")
-                .padding()
+            HStack {
+                Text("Settings")
+                    .font(.title)
+                    .padding()
+                Spacer()
+            }
             
             Divider()
                 .frame(height: 1)
@@ -20,10 +27,11 @@ struct HalfSettingsView: View {
             
             ThemeCollapsedView()
             
+            Spacer()
+            
         }
-        .onShake {
-            print("hey hey now")
-        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(currentTheme.contrastBackgroundColor)
     }
 }
 

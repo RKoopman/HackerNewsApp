@@ -16,25 +16,48 @@ struct SearchSheetView: View {
 
     var body: some View {
         VStack {
+//            NavigationStack {
+//                Text("Searching for \(searchText)")
+//            }
+//            TextField("Seach", text: $searchText)
+//                .searchable(text: $searchText)
+//                .onSubmit(of: .search, searchCall)
+////                .background(.red)
             NavigationStack {
-                Text("Searching for \(searchText)")
+                VStack {
+                    TextField("Seach . . . ", text: $searchText)
+                        .font(.title)
+                        .fontWeight(.medium)
+                        .padding(.horizontal)
+                        .padding(.bottom)
+//                        .onSubmit(of: .search, searchCall)
+                        .onSubmit {
+                            searchCall()
+                            dismiss()
+                        }
+                    Divider()
+                        .frame(height: 1)
+                        .overlay(.gray)
+                        .padding(.horizontal)
+                }
             }
-            .searchable(text: $searchText)
-            .onSubmit(of: .search, searchCall)
+            
+//            1.  setup TextField with no searchable() - for something more custom, remove NavigationStack{...}
+//            2.  inject that same string ($searchText) into searchCall
+//            3.  edit search sheet
             
             Button("Dismiss") {
                 dismiss()
             }
             .font(.body)
             .fontWeight(.semibold)
-            .padding(.horizontal, 30)
-            .padding(.vertical, 15)
+            .padding(.horizontal, 20)
+            .padding(.vertical, 10)
             .foregroundColor(currentTheme.buttonTextColor)
             .background(currentTheme.contrastBackgroundColor)
-            .cornerRadius(20)
+            .cornerRadius(8)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(currentTheme.backgroundColor)
+        .background(currentTheme.backgroundColor) // <- should manage background for full view
     }
        
     private func searchCall() {

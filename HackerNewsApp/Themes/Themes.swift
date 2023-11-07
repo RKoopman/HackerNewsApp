@@ -101,7 +101,7 @@ var themes: [Theme] = [
         secondaryColor: .appColor(.lightBlue50),
         
         backgroundColor: .appColor(.grey10),
-        contrastBackgroundColor: .appColor(.grey50),
+        contrastBackgroundColor: .appColor(.grey30),
             
         bodyTextColor: .appColor(.grey80),
         bodyTextColorAlt: .appColor(.grey40),

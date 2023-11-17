@@ -27,6 +27,8 @@
 		508889EB28B9526A008E1C56 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889EA28B9526A008E1C56 /* WebView.swift */; };
 		508889ED28BD5862008E1C56 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889EC28BD5862008E1C56 /* FilterButton.swift */; };
 		508889EF28BD5B5A008E1C56 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889EE28BD5B5A008E1C56 /* FilterManager.swift */; };
+		50A86D102B07BEB0007E2056 /* HackerLandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A86D0F2B07BEB0007E2056 /* HackerLandingView.swift */; };
+		50A86D122B07D34C007E2056 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A86D112B07D34C007E2056 /* MainView.swift */; };
 		50D3DE3B28E8F67700756248 /* HackerColorCatalog.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D3DE3A28E8F67700756248 /* HackerColorCatalog.xcassets */; };
 		50D3DE3F28F57E0800756248 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D3DE3E28F57E0800756248 /* Themes.swift */; };
 		50D3DE4128F5883E00756248 /* Colors+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D3DE4028F5883E00756248 /* Colors+Extensions.swift */; };
@@ -75,6 +77,8 @@
 		508889EA28B9526A008E1C56 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		508889EC28BD5862008E1C56 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		508889EE28BD5B5A008E1C56 /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
+		50A86D0F2B07BEB0007E2056 /* HackerLandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerLandingView.swift; sourceTree = "<group>"; };
+		50A86D112B07D34C007E2056 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		50D3DE3A28E8F67700756248 /* HackerColorCatalog.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HackerColorCatalog.xcassets; sourceTree = "<group>"; };
 		50D3DE3E28F57E0800756248 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		50D3DE4028F5883E00756248 /* Colors+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Extensions.swift"; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				7C929F1B26977A8F002E9041 /* HackerView.swift */,
+				50A86D112B07D34C007E2056 /* MainView.swift */,
+				50A86D0F2B07BEB0007E2056 /* HackerLandingView.swift */,
 				503B880E28E1EFD300054884 /* Articles Views */,
 				506BD6BC29C607D500BDFE31 /* MyStuff Views */,
 				506BD6BB29C607B000BDFE31 /* Shared Components */,
@@ -399,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5017A9162AF3DEDB00E914D8 /* HalfSettingsView.swift in Sources */,
+				50A86D122B07D34C007E2056 /* MainView.swift in Sources */,
 				508889E428B94672008E1C56 /* NetworkManager.swift in Sources */,
 				505A9BE829C502DF004B5B07 /* SavedPosts.swift in Sources */,
 				50826ADD29AE226800365802 /* ButtonsView.swift in Sources */,
@@ -406,6 +413,7 @@
 				50826B5129AFA44600365802 /* SearchSheetView.swift in Sources */,
 				508889E628B9492E008E1C56 /* PostData.swift in Sources */,
 				7C929F1C26977A8F002E9041 /* HackerView.swift in Sources */,
+				50A86D102B07BEB0007E2056 /* HackerLandingView.swift in Sources */,
 				508889EB28B9526A008E1C56 /* WebView.swift in Sources */,
 				50D3DE3F28F57E0800756248 /* Themes.swift in Sources */,
 				503C0A522AEAD5DF00CC83BA /* ArticleCell.swift in Sources */,

@@ -45,7 +45,7 @@ struct SavedArticlesView: View {
                         .listRowBackground(Color.clear)
                     }
                 .listStyle(.plain)
-                .background(currentTheme.backgroundColor)
+                .background(currentTheme.backgroundPrimaryColor)
                 InfoBlurb(instruction: "Swipe right on articles to remove them.")
                     .padding(.horizontal)
                 Spacer()

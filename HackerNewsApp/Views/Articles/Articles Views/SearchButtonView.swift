@@ -20,12 +20,12 @@ struct SearchButtonView: View {
                 hapticFB.impactOccurred()
         }) {
             Image(systemName: "magnifyingglass")
-                .foregroundColor(currentTheme.buttonTextColor)
+                .foregroundColor(currentTheme.buttonTextPrimaryColor)
                 .font(Font.body.weight(.heavy))
                 .padding(.horizontal, 12)
                 .padding(.vertical, 12)
         }
-        .background(currentTheme.brandColor)
+        .background(currentTheme.brandPrimaryColor)
         .cornerRadius(5.0)
         .shadow(radius: 2)
         .sheet(isPresented: $showingSearchSheet) {

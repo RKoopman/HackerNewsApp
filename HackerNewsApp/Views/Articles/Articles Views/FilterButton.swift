@@ -24,11 +24,11 @@ struct FilterButton: View {
             Text(buttonText)
                 .font(.system(size: 23))
                 .fontWeight(.heavy)
-                .foregroundColor(currentTheme.buttonTextColor)
+                .foregroundColor(currentTheme.buttonTextPrimaryColor)
                 .padding(.horizontal, 8)
                 .padding(.vertical, 8)
         }
-        .background(currentTheme.brandColor) 
+        .background(currentTheme.brandPrimaryColor) 
         .cornerRadius(5.0)
         .shadow(radius: 2)
     }

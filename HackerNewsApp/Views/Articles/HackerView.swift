@@ -14,7 +14,7 @@ struct HackerView: View {
     @State var isSettingsShown:Bool = false
     
     init() {
-        UITabBar.appearance().backgroundColor = UIColor(currentTheme.backgroundColor)
+        UITabBar.appearance().backgroundColor = UIColor(currentTheme.backgroundPrimaryColor)
     }
     
     var body: some View {
@@ -29,7 +29,7 @@ struct HackerView: View {
                         Label("Saved", systemImage: "bookmark.circle")
                     }
             }
-            .accentColor(currentTheme.brandColor) // tabbar icon colors
+            .accentColor(currentTheme.brandPrimaryColor) // tabbar icon colors
             .onShake {
                 isSettingsShown.toggle()
                 print(isSettingsShown)

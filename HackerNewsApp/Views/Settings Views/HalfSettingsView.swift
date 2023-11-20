@@ -31,7 +31,7 @@ struct HalfSettingsView: View {
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(currentTheme.contrastBackgroundColor)
+        .background(currentTheme.contrastBackgroundPrimaryColor)
     }
 }
 

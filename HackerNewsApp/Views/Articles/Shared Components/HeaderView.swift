@@ -19,11 +19,11 @@ struct HeaderView: View {
                 .font(.title)
                 .fontWeight(.heavy)
                 .padding(12)
-                .foregroundColor(currentTheme.cellTitleTextColor)
+                .foregroundColor(currentTheme.textPrimaryColor)
             
             Spacer()
         }
-        .background(currentTheme.backgroundColor)
+        .background(currentTheme.backgroundPrimaryColor)
     }
 }
 

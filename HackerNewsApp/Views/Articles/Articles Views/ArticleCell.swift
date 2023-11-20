@@ -21,11 +21,11 @@ struct ArticleCell: View {
                 .padding(.horizontal, 3)
             VStack(alignment: .leading) {
                 Text(title)
-                    .foregroundColor(currentTheme.cellTitleTextColor)
+                    .foregroundColor(currentTheme.textPrimaryColor)
                 Text(url)
                     .font(.system(size: 10))
                     .lineLimit(1)
-                    .foregroundColor(currentTheme.bodyTextColorAlt)
+                    .foregroundColor(currentTheme.textSecondaryColor)
             }
         }
     }

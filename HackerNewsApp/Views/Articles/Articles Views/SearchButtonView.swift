@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchButtonView: View {
     
-    @State var currentTheme: Theme = themes[0]
+    @State var currentTheme: Theme = themes[1]
     @State private var showingSearchSheet = false
 
     var body: some View {

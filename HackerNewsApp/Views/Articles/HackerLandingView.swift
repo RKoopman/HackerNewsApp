@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HackerLandingView: View {
     
-    @State var currentTheme: Theme = themes[0]
+    @State var currentTheme: Theme = themes[1]
 
     var body: some View {
         ZStack {

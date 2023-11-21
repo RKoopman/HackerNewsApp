@@ -12,7 +12,7 @@ struct SearchSheetView: View {
 
     @EnvironmentObject var networkManager: NetworkManager
     @State private var searchText: String = ""
-    @State var currentTheme: Theme = themes[0]
+    @State var currentTheme: Theme = themes[1]
 
     var body: some View {
         VStack {

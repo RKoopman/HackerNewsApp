@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SavedArticlesView: View {
     
-    @State var currentTheme: Theme = themes[0]
+    @State var currentTheme: Theme = themes[1]
     @ObservedObject var savedPosts: SavedPosts
     
     var body: some View {

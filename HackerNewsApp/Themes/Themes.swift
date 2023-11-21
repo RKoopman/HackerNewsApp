@@ -108,25 +108,32 @@ class AllThemes {
             buttonBackgroundSecondaryColor: .blue30,
             buttonContructiveColor: .lightBlue30,
             buttonDestructiveColor: .red50
-        )
+        ),
         
-        // light
-//        Theme(
-//            brandColor: .appColor(.navyBlue00),
-//            brandSecondaryColor: .appColor(.lightBlue70),
-//            
-//            backgroundColor: .appColor(.lightGrey00),
-//            contrastBackgroundColor: .appColor(.grey00),
-//                
-//            bodyTextColor: .appColor(.darkGrey00),
-//            bodyTextColorAlt: .appColor(.grey40),
-//            titleTextColor: .appColor(.darkGrey50),
-//            buttonTextColor: .appColor(.lightGrey20),
-//                
-//            buttonBackgroundColor: .appColor(.navyBlue00),
-//            buttonContructiveColor: .appColor(.lightBlue30),
-//            buttonDestructiveColor: .appColor(.red50)
-//         )
+        Theme(
+            id: 01,
+            
+            brandPrimaryColor: .forestGreen40,
+            brandSecondaryColor: .green20,
+            brandTertiaryColor: .green80,
+            
+            backgroundPrimaryColor: .lightGrey00,
+            backgroundSecondaryColor: .lightGrey80,
+            contrastBackgroundPrimaryColor: .grey00,
+            contrastBackgroundSecondaryColor: .grey40,
+            
+            textPrimaryColor: .black10,
+            textSecondaryColor: .grey40,
+            textTertiaryColor: .lightGrey20,
+            
+            buttonTextPrimaryColor: .lightGrey20,
+            buttonTextSecondaryColor: .black10,
+            
+            buttonBackgroundPrimaryColor: .forestGreen10,
+            buttonBackgroundSecondaryColor: .green20,
+            buttonContructiveColor: .lightBlue30,
+            buttonDestructiveColor: .red50
+        )
     ]
 }
 
@@ -154,6 +161,31 @@ var themes: [Theme] = [
         
         buttonBackgroundPrimaryColor: .navyBlue00,
         buttonBackgroundSecondaryColor: .blue30,
+        buttonContructiveColor: .lightBlue30,
+        buttonDestructiveColor: .red50
+    ),
+    
+    Theme(
+        id: 01,
+        
+        brandPrimaryColor: .forestGreen40,
+        brandSecondaryColor: .green20,
+        brandTertiaryColor: .green80,
+        
+        backgroundPrimaryColor: .lightGrey00,
+        backgroundSecondaryColor: .lightGrey80,
+        contrastBackgroundPrimaryColor: .grey00,
+        contrastBackgroundSecondaryColor: .grey40,
+        
+        textPrimaryColor: .black10,
+        textSecondaryColor: .grey40,
+        textTertiaryColor: .lightGrey20,
+        
+        buttonTextPrimaryColor: .lightGrey20,
+        buttonTextSecondaryColor: .black10,
+        
+        buttonBackgroundPrimaryColor: .forestGreen10,
+        buttonBackgroundSecondaryColor: .green20,
         buttonContructiveColor: .lightBlue30,
         buttonDestructiveColor: .red50
     )

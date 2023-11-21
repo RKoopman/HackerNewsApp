@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ButtonsView: View {
     
-    @State var currentTheme: Theme = themes[0]
+    @State var currentTheme: Theme = themes[1]
     let filterManager = FilterManager.shared
 
     var body: some View {

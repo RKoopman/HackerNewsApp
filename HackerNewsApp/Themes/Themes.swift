@@ -145,7 +145,7 @@ var themes: [Theme] = [
         contrastBackgroundPrimaryColor: .grey00,
         contrastBackgroundSecondaryColor: .grey40,
         
-        textPrimaryColor: .darkGrey00,
+        textPrimaryColor: .black10,
         textSecondaryColor: .grey40,
         textTertiaryColor: .lightGrey20,
         

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HalfSettingsView: View {
     
-        let currentTheme = ThemeSetter.shared.getTheme()
+    let currentTheme = ThemeSetter.shared.getTheme()
+    @State var expandedThemeView:Bool = false
 
     
     var body: some View {
@@ -17,16 +18,24 @@ struct HalfSettingsView: View {
             HStack {
                 Text("Settings")
                     .font(.title)
-                    .padding()
+                    .padding(.horizontal)
                 Spacer()
             }
             
             Divider()
                 .frame(height: 1)
                 .overlay(.gray)
-                .padding(.horizontal)
+
             
-            ThemeCollapsedView()
+            Button(action: {
+                expandedThemeView.toggle()
+            }, label: {
+                if expandedThemeView == true {
+                    ThemeExpandedView()
+                } else {
+                    ThemeCollapsedView()
+                }
+            })
             
             Spacer()
             

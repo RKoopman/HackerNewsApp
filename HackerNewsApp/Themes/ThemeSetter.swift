@@ -19,10 +19,10 @@ final class ThemeSetter: ThemeProtocal {
     
     private init() {}
     
-    private var currentThemeID: Int = 01
+    var currentThemeID: Int = 02
     private var allThemes = AllThemes()
     
-    func updateTheme(newID: Int) {      // not used yet
+    func updateTheme(newID: Int) {      
         currentThemeID = newID
     }
     
@@ -35,6 +35,5 @@ final class ThemeSetter: ThemeProtocal {
         } else {
             return allThemes.themes[0]
         }
-         
     }
 }

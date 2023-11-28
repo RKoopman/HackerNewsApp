@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class Theme {
+class Theme: Identifiable {
     
     var id: Int
     
@@ -133,6 +133,32 @@ class AllThemes {
             buttonBackgroundSecondaryColor: .green20,
             buttonContructiveColor: .lightBlue30,
             buttonDestructiveColor: .red50
+        ),
+        
+        Theme(
+            id: 02,
+            
+            brandPrimaryColor: .orange80,
+            brandSecondaryColor: .orange40,
+            brandTertiaryColor: .orange10,
+            
+            backgroundPrimaryColor: .darkGrey80,
+            backgroundSecondaryColor: .darkGrey00,
+            contrastBackgroundPrimaryColor: .lightBlue10,
+            contrastBackgroundSecondaryColor: .purple00,
+            
+            textPrimaryColor: .lightGrey00,
+            textSecondaryColor: .grey10,
+            textTertiaryColor: .lightGrey20,
+            
+            buttonTextPrimaryColor: .darkGrey60,
+            buttonTextSecondaryColor: .lightGrey00,
+            
+            buttonBackgroundPrimaryColor: .orange80,
+            buttonBackgroundSecondaryColor: .orange40,
+            buttonContructiveColor: .lightBlue30,
+            buttonDestructiveColor: .red50
         )
+
     ]
 }

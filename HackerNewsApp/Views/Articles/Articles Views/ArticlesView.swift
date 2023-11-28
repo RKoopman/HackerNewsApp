@@ -52,7 +52,6 @@ struct ArticlesView: View {
             }
         }
         .environmentObject(networkManager)
-//        .environmentObject(currentTheme)
         .onAppear {
             self.networkManager.fetchData(callURL: "https://hn.algolia.com/api/v1/search?tags=front_page")
         }

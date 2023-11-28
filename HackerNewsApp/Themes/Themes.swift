@@ -185,7 +185,7 @@ var themes: [Theme] = [
         buttonTextSecondaryColor: .black10,
         
         buttonBackgroundPrimaryColor: .forestGreen10,
-        buttonBackgroundSecondaryColor: .green20,
+        buttonBackgroundSecondaryColor: .forestGreen10,
         buttonContructiveColor: .lightBlue30,
         buttonDestructiveColor: .red50
     )

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HalfSettingsView: View {
     
-    @State var currentTheme: Theme = themes[1]
+        var currentTheme = ThemeSetter().getTheme()
+
     
     var body: some View {
         VStack {

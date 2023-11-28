@@ -9,7 +9,8 @@ import SwiftUI
 
 struct InfoBlurb: View {
     
-    @State var currentTheme: Theme = themes[1]
+        var currentTheme = ThemeSetter().getTheme()
+
     var instruction:String = ""
     
     var body: some View {

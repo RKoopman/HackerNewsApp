@@ -12,7 +12,8 @@ struct SearchSheetView: View {
 
     @EnvironmentObject var networkManager: NetworkManager
     @State private var searchText: String = ""
-    @State var currentTheme: Theme = themes[1]
+        var currentTheme = ThemeSetter().getTheme()
+
 
     var body: some View {
         VStack {

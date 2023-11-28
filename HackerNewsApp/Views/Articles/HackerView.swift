@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HackerView: View {
     
-    @State var currentTheme: Theme = themes[0]
+    @State var currentTheme: Theme = themes[1]
     @StateObject var savedPosts = SavedPosts()
     @State var isSettingsShown:Bool = false
     

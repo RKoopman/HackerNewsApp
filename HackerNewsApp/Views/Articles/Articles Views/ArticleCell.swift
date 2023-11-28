@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ArticleCell: View {
     
-    @State var currentTheme: Theme = themes[1]
+//    @State var currentTheme: Theme = themes[1]
+    var currentTheme = ThemeSetter().getTheme()
+
 
     var points:Int
     var title:String

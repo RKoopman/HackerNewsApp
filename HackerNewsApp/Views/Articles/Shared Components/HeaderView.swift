@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HeaderView: View {
     
-    @State var currentTheme: Theme = themes[1]
+        var currentTheme = ThemeSetter().getTheme()
+
 
     var title: String
     

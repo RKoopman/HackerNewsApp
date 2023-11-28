@@ -11,7 +11,7 @@ struct ArticlesView: View {
     
     @StateObject var networkManager = NetworkManager()
     @ObservedObject var savedPosts: SavedPosts
-        var currentTheme = ThemeSetter().getTheme()
+    let currentTheme = ThemeSetter.shared.getTheme()
 
     
     var body: some View {

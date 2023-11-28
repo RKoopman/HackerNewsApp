@@ -9,13 +9,14 @@ import SwiftUI
 
 struct HackerView: View {
     
-    @State var currentTheme: Theme = themes[1]
     @StateObject var savedPosts = SavedPosts()
     @State var isSettingsShown:Bool = false
-    
+    let currentTheme = ThemeSetter.shared.getTheme()
+
     init() {
         UITabBar.appearance().backgroundColor = UIColor(currentTheme.backgroundPrimaryColor)
     }
+    
     
     var body: some View {
             TabView {

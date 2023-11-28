@@ -12,7 +12,7 @@ struct SearchSheetView: View {
 
     @EnvironmentObject var networkManager: NetworkManager
     @State private var searchText: String = ""
-        var currentTheme = ThemeSetter().getTheme()
+    let currentTheme = ThemeSetter.shared.getTheme()
 
 
     var body: some View {

@@ -10,11 +10,12 @@ import SwiftUI
 struct FilterButton: View {
 
     @EnvironmentObject var networkManager: NetworkManager
-        var currentTheme = ThemeSetter().getTheme()
+    let currentTheme = ThemeSetter.shared.getTheme()
 
 
     var buttonText: String
     var buttonURL : String
+    
     
     var body: some View {
         Button(action: {

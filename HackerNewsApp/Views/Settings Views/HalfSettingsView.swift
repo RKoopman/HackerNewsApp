@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HalfSettingsView: View {
     
-        var currentTheme = ThemeSetter().getTheme()
+        let currentTheme = ThemeSetter.shared.getTheme()
 
     
     var body: some View {

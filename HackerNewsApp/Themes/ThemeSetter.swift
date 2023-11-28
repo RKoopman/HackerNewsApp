@@ -9,9 +9,17 @@ import Foundation
 import SwiftUI
 
 
-class ThemeSetter: ObservableObject {
+protocol ThemeProtocal: AnyObject {
+    func getTheme() -> Theme
+}
+
+final class ThemeSetter: ThemeProtocal {
     
-    private var currentThemeIndex: Int = 1
+    static let shared = ThemeSetter()
+    
+    private init() {}
+    
+    private var currentThemeIndex: Int = 0
     private var allThemes = AllThemes()
     
     func updateTheme(newID: Int) {

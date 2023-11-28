@@ -9,13 +9,12 @@ import SwiftUI
 
 struct ArticleCell: View {
     
-//    @State var currentTheme: Theme = themes[1]
-    var currentTheme = ThemeSetter().getTheme()
-
+    let currentTheme = ThemeSetter.shared.getTheme()
 
     var points:Int
     var title:String
     var url:String
+    
     
     var body: some View {
         HStack {

@@ -19,15 +19,22 @@ final class ThemeSetter: ThemeProtocal {
     
     private init() {}
     
-    private var currentThemeIndex: Int = 0
+    private var currentThemeID: Int = 01
     private var allThemes = AllThemes()
     
-    func updateTheme(newID: Int) {
-        currentThemeIndex = newID
+    func updateTheme(newID: Int) {      // not used yet
+        currentThemeID = newID
     }
     
     func getTheme() -> Theme {
-        let currentTheme = allThemes.themes[currentThemeIndex]
-        return currentTheme
+        
+        let likelyTheme = allThemes.themes.filter { $0.id == currentThemeID }.first ?? nil
+        
+        if likelyTheme != nil {
+            return likelyTheme!
+        } else {
+            return allThemes.themes[0]
+        }
+         
     }
 }

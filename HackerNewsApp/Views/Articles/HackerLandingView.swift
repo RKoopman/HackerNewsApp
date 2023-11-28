@@ -9,8 +9,9 @@ import SwiftUI
 
 struct HackerLandingView: View {
     
-    @State var currentTheme: Theme = themes[0]
+    let currentTheme = ThemeSetter.shared.getTheme()
 
+    
     var body: some View {
         ZStack {
             Image("HLandingImage")

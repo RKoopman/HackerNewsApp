@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HalfSettingsView: View {
     
-    @State var currentTheme: Theme = themes[0]
+        let currentTheme = ThemeSetter.shared.getTheme()
+
     
     var body: some View {
         VStack {
@@ -31,7 +32,7 @@ struct HalfSettingsView: View {
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(currentTheme.contrastBackgroundColor)
+        .background(currentTheme.contrastBackgroundPrimaryColor)
     }
 }
 

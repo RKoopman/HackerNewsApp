@@ -11,7 +11,8 @@ struct ArticlesView: View {
     
     @StateObject var networkManager = NetworkManager()
     @ObservedObject var savedPosts: SavedPosts
-    @State var currentTheme: Theme = themes[0]
+    let currentTheme = ThemeSetter.shared.getTheme()
+
     
     var body: some View {
         NavigationView {
@@ -35,14 +36,14 @@ struct ArticlesView: View {
                             Image(systemName: "bookmark", variableValue: 1.00)
                                 .symbolRenderingMode(.monochrome)
                                 .font(.system(size: 16, weight: .regular))
-                                .foregroundColor(currentTheme.buttonTextColor)
+                                .foregroundColor(currentTheme.buttonTextPrimaryColor)
                         }
                         .tint(currentTheme.buttonContructiveColor)
                     }
                     .listRowBackground(Color.clear)
                 }
                 .listStyle(.plain)
-                .background(currentTheme.backgroundColor)
+                .background(currentTheme.backgroundPrimaryColor)
                 .refreshable {
                     self.networkManager.reFetchData()
                 }
@@ -51,7 +52,7 @@ struct ArticlesView: View {
             }
         }
         .environmentObject(networkManager)
-        .environmentObject(currentTheme)
+//        .environmentObject(currentTheme)
         .onAppear {
             self.networkManager.fetchData(callURL: "https://hn.algolia.com/api/v1/search?tags=front_page")
         }

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HeaderView: View {
     
-    @State var currentTheme: Theme = themes[0]
+        let currentTheme = ThemeSetter.shared.getTheme()
+
 
     var title: String
     
@@ -19,11 +20,11 @@ struct HeaderView: View {
                 .font(.title)
                 .fontWeight(.heavy)
                 .padding(12)
-                .foregroundColor(currentTheme.cellTitleTextColor)
+                .foregroundColor(currentTheme.textPrimaryColor)
             
             Spacer()
         }
-        .background(currentTheme.backgroundColor)
+        .background(currentTheme.backgroundPrimaryColor)
     }
 }
 

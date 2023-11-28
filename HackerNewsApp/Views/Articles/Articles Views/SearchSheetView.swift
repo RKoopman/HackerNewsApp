@@ -12,7 +12,8 @@ struct SearchSheetView: View {
 
     @EnvironmentObject var networkManager: NetworkManager
     @State private var searchText: String = ""
-    @State var currentTheme: Theme = themes[0]
+    let currentTheme = ThemeSetter.shared.getTheme()
+
 
     var body: some View {
         VStack {
@@ -42,14 +43,14 @@ struct SearchSheetView: View {
                 .fontWeight(.semibold)
                 .padding(.horizontal, 20)
                 .padding(.vertical, 10)
-                .foregroundColor(currentTheme.buttonTextColor)
-                .background(currentTheme.contrastBackgroundColor)
+                .foregroundColor(currentTheme.buttonTextPrimaryColor)
+                .background(currentTheme.buttonBackgroundSecondaryColor)
                 .cornerRadius(8)
                 Spacer()
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(currentTheme.backgroundColor)
+        .background(currentTheme.backgroundPrimaryColor)
     }
        
     private func searchCall() {

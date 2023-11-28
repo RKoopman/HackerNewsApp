@@ -8,108 +8,131 @@
 import Foundation
 import SwiftUI
 
-class Theme: ObservableObject {
+class Theme {
     
-    @Published var brandColor: Color
-    @Published var secondaryColor: Color
+    var id: Int
     
-    @Published var backgroundColor: Color
-    @Published var contrastBackgroundColor: Color
+    var brandPrimaryColor: Color
+    var brandSecondaryColor: Color
+    var brandTertiaryColor: Color
+
+    var backgroundPrimaryColor: Color
+    var backgroundSecondaryColor: Color
+    var contrastBackgroundPrimaryColor: Color
+    var contrastBackgroundSecondaryColor: Color
     
-    @Published var bodyTextColor: Color
-    @Published var bodyTextColorAlt: Color
-    @Published var cellTitleTextColor: Color
-    @Published var buttonTextColor: Color
+    var textPrimaryColor: Color
+    var textSecondaryColor: Color
+    var textTertiaryColor: Color
     
-    @Published var buttonBackgroundColor: Color
-    @Published var buttonContructiveColor: Color
-    @Published var buttonDestructiveColor: Color
+    var buttonTextPrimaryColor: Color
+    var buttonTextSecondaryColor: Color
+
+    var buttonBackgroundPrimaryColor: Color
+    var buttonBackgroundSecondaryColor: Color
+    var buttonContructiveColor: Color
+    var buttonDestructiveColor: Color
+
+    init(
+        id: Int,
+        
+        brandPrimaryColor: Color,
+        brandSecondaryColor: Color,
+        brandTertiaryColor: Color,
+
+        backgroundPrimaryColor: Color,
+        backgroundSecondaryColor: Color,
+        contrastBackgroundPrimaryColor: Color,
+        contrastBackgroundSecondaryColor: Color,
     
-    init(   brandColor:Color,
-            secondaryColor:Color,
+        textPrimaryColor: Color,
+        textSecondaryColor: Color,
+        textTertiaryColor: Color,
+    
+        buttonTextPrimaryColor: Color,
+        buttonTextSecondaryColor: Color,
+
+        buttonBackgroundPrimaryColor: Color,
+        buttonBackgroundSecondaryColor: Color,
+        buttonContructiveColor: Color,
+        buttonDestructiveColor: Color) {
             
-            backgroundColor:Color,
-            contrastBackgroundColor:Color,
+            self.id = id
+        
+            self.brandPrimaryColor = brandPrimaryColor
+            self.brandSecondaryColor = brandSecondaryColor
+            self.brandTertiaryColor = brandTertiaryColor
+        
+            self.backgroundPrimaryColor = backgroundPrimaryColor
+            self.backgroundSecondaryColor = backgroundSecondaryColor
+            self.contrastBackgroundPrimaryColor = contrastBackgroundPrimaryColor
+            self.contrastBackgroundSecondaryColor = contrastBackgroundSecondaryColor
+        
+            self.textPrimaryColor = textPrimaryColor
+            self.textSecondaryColor = textSecondaryColor
+            self.textTertiaryColor = textTertiaryColor
             
-            bodyTextColor:Color,
-            bodyTextColorAlt: Color,
-            titleTextColor: Color,
-            buttonTextColor: Color,
-            
-            buttonBackgroundColor: Color,
-            buttonContructiveColor: Color,
-            buttonDestructiveColor: Color) {
+            self.buttonTextPrimaryColor = buttonTextPrimaryColor
+            self.buttonTextSecondaryColor = buttonTextSecondaryColor
         
-            self.brandColor = brandColor
-            self.secondaryColor = secondaryColor
-        
-            self.backgroundColor = backgroundColor
-            self.contrastBackgroundColor = contrastBackgroundColor
-        
-            self.bodyTextColor = bodyTextColor
-            self.bodyTextColorAlt = bodyTextColorAlt
-            self.cellTitleTextColor = titleTextColor
-            self.buttonTextColor = buttonTextColor
-        
-            self.buttonBackgroundColor = buttonBackgroundColor
+            self.buttonBackgroundPrimaryColor = buttonBackgroundPrimaryColor
+            self.buttonBackgroundSecondaryColor = buttonBackgroundSecondaryColor
             self.buttonContructiveColor = buttonContructiveColor
             self.buttonDestructiveColor = buttonDestructiveColor
         }
 }
 
-var themes: [Theme] = [
+class AllThemes {
+    var themes: [Theme] = [
 
-    // light
-    Theme(
-        brandColor: .appColor(.navyBlue00),
-        secondaryColor: .appColor(.lightBlue70),
+        Theme(
+            id: 00,
+            
+            brandPrimaryColor: .navyBlue00,
+            brandSecondaryColor: .lightBlue70,
+            brandTertiaryColor: .lightBlue20,
+            
+            backgroundPrimaryColor: .lightGrey00,
+            backgroundSecondaryColor: .lightGrey80,
+            contrastBackgroundPrimaryColor: .grey00,
+            contrastBackgroundSecondaryColor: .grey40,
+            
+            textPrimaryColor: .black10,
+            textSecondaryColor: .grey40,
+            textTertiaryColor: .lightGrey20,
+            
+            buttonTextPrimaryColor: .lightGrey20,
+            buttonTextSecondaryColor: .black10,
+            
+            buttonBackgroundPrimaryColor: .navyBlue00,
+            buttonBackgroundSecondaryColor: .blue30,
+            buttonContructiveColor: .lightBlue30,
+            buttonDestructiveColor: .red50
+        ),
         
-        backgroundColor: .appColor(.lightGrey00),
-        contrastBackgroundColor: .appColor(.grey00),
+        Theme(
+            id: 01,
             
-        bodyTextColor: .appColor(.darkGrey00),
-        bodyTextColorAlt: .appColor(.grey40),
-        titleTextColor: .appColor(.darkGrey50),
-        buttonTextColor: .appColor(.lightGrey20),
+            brandPrimaryColor: .forestGreen40,
+            brandSecondaryColor: .green20,
+            brandTertiaryColor: .green80,
             
-        buttonBackgroundColor: .appColor(.navyBlue00),
-        buttonContructiveColor: .appColor(.lightBlue30),
-        buttonDestructiveColor: .appColor(.red50)
-     ),
-    
-    // sunset
-    Theme(
-        brandColor: .appColor(.brown10),
-        secondaryColor: .appColor(.brown00),
-        
-        backgroundColor: .appColor(.brown00),
-        contrastBackgroundColor: .appColor(.brown20),
+            backgroundPrimaryColor: .lightGrey00,
+            backgroundSecondaryColor: .lightGrey80,
+            contrastBackgroundPrimaryColor: .grey00,
+            contrastBackgroundSecondaryColor: .grey40,
             
-        bodyTextColor: .appColor(.grey80),
-        bodyTextColorAlt: .appColor(.darkGrey00),
-        titleTextColor: .appColor(.grey80),
-        buttonTextColor: .appColor(.darkGrey00),
+            textPrimaryColor: .black10,
+            textSecondaryColor: .grey40,
+            textTertiaryColor: .lightGrey20,
             
-        buttonBackgroundColor: .appColor(.forestGreen10),
-        buttonContructiveColor: .appColor(.lightBlue30),
-        buttonDestructiveColor: .appColor(.red50)
-     ),
-    
-    // dark
-    Theme(
-        brandColor: .appColor(.grey40),
-        secondaryColor: .appColor(.lightBlue50),
-        
-        backgroundColor: .appColor(.grey10),
-        contrastBackgroundColor: .appColor(.grey30),
+            buttonTextPrimaryColor: .lightGrey20,
+            buttonTextSecondaryColor: .black10,
             
-        bodyTextColor: .appColor(.grey80),
-        bodyTextColorAlt: .appColor(.grey40),
-        titleTextColor: .appColor(.grey80),
-        buttonTextColor: .appColor(.grey10),
-            
-        buttonBackgroundColor: .appColor(.grey40),
-        buttonContructiveColor: .appColor(.green20),
-        buttonDestructiveColor: .appColor(.red50)
-     )
-]
+            buttonBackgroundPrimaryColor: .forestGreen10,
+            buttonBackgroundSecondaryColor: .green20,
+            buttonContructiveColor: .lightBlue30,
+            buttonDestructiveColor: .red50
+        )
+    ]
+}

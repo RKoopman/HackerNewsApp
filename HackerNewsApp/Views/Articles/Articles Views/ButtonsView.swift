@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ButtonsView: View {
     
-    @State var currentTheme: Theme = themes[0]
+    let currentTheme = ThemeSetter.shared.getTheme()
     let filterManager = FilterManager.shared
 
     var body: some View {
@@ -19,7 +19,7 @@ struct ButtonsView: View {
                     .padding(.leading, 10)
                 Text("|")
                     .font(.system(size: 39, weight: .light, design: .serif))
-                    .foregroundColor(currentTheme.bodyTextColorAlt)
+                    .foregroundColor(currentTheme.buttonTextSecondaryColor)
                 filterManager.setupButton(for: .frontPage)
                 filterManager.setupButton(for: .latest)
                 filterManager.setupButton(for: .apple)
@@ -28,7 +28,7 @@ struct ButtonsView: View {
             }
             .padding(.vertical, 10)
         }
-        .background(currentTheme.backgroundColor)
+        .background(currentTheme.backgroundPrimaryColor)
     }
 }
 

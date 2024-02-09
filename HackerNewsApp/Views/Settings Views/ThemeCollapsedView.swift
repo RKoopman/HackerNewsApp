@@ -8,16 +8,28 @@
 import SwiftUI
 
 struct ThemeCollapsedView: View {
+    
+    let currentTheme = ThemeSetter.shared.getTheme()
+    
+    
     var body: some View {
-        HStack {
-            Text("Theme")
-            Image(systemName: "greaterthan", variableValue: 1.00)
-            .symbolRenderingMode(.monochrome)
-            .foregroundColor(Color.accentColor)
-            .font(.system(size: 16, weight: .bold))
-            Spacer()
+        VStack {
+            HStack {
+                Text("Theme")
+                Image(systemName: "greaterthan", variableValue: 1.00)
+                .symbolRenderingMode(.monochrome)
+                .foregroundColor(Color.accentColor)
+                .font(.system(size: 16, weight: .bold))
+                Spacer()
+            }
+            .padding(.horizontal)
+            
+            ThemeSettingsView(brand: currentTheme.brandPrimaryColor,
+                              background: currentTheme.backgroundPrimaryColor,
+                              text: currentTheme.textPrimaryColor,
+                              button: currentTheme.buttonBackgroundPrimaryColor,
+                              textSecondary: currentTheme.textSecondaryColor)
         }
-        .padding(.horizontal)
     }
 }
 

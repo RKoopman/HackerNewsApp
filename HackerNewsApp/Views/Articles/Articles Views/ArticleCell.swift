@@ -20,6 +20,7 @@ struct ArticleCell: View {
         HStack {
             Text(String(points))
                 .padding(.horizontal, 3)
+                .foregroundColor(currentTheme.textPrimaryColor)
             VStack(alignment: .leading) {
                 Text(title)
                     .foregroundColor(currentTheme.textPrimaryColor)

@@ -30,7 +30,7 @@ struct HackerView: View {
                         Label("Saved", systemImage: "bookmark.circle")
                     }
             }
-            .accentColor(currentTheme.brandPrimaryColor) // tabbar icon colors
+            .tint(currentTheme.brandPrimaryColor) // tabbar icon colors
             .onShake {
                 isSettingsShown.toggle()
                 print(isSettingsShown)

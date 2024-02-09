@@ -13,17 +13,20 @@ protocol ThemeProtocal: AnyObject {
     func getTheme() -> Theme
 }
 
-final class ThemeSetter: ThemeProtocal {
+final class ThemeSetter {
     
-    static let shared = ThemeSetter()
+    static var shared = ThemeSetter()
     
     private init() {}
     
-    private var currentThemeID: Int = 01
+    var currentThemeID: Int = ThemeEnvKey.defaultValue
     private var allThemes = AllThemes()
     
-    func updateTheme(newID: Int) {      // not used yet
+    func updateTheme(newID: Int) -> ThemeSetter {
         currentThemeID = newID
+        print("new ThemeID :: \(currentThemeID)")
+        
+        return ThemeSetter()
     }
     
     func getTheme() -> Theme {
@@ -35,6 +38,25 @@ final class ThemeSetter: ThemeProtocal {
         } else {
             return allThemes.themes[0]
         }
-         
+    }
+}
+
+
+private struct ThemeEnvKey: EnvironmentKey {
+    static let defaultValue: Int = 01
+}
+
+extension EnvironmentValues {
+    var theme: Int {
+        get { self[ThemeEnvKey.self] }
+        set { self[ThemeEnvKey.self] = newValue }
+    }
+}
+
+
+    // how to use this??
+extension View {
+    func theme(_ themeID: Int) -> some View {
+        environment(\.theme, themeID)
     }
 }

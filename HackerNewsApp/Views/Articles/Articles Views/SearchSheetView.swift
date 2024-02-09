@@ -19,9 +19,13 @@ struct SearchSheetView: View {
         VStack {
             VStack {
                 Spacer()
-                TextField("Seach . . . ", text: $searchText)
+                TextField("", text: $searchText)
+                    .placeholder(when: searchText.isEmpty) {
+                        Text("Seach . . . ").foregroundColor(currentTheme.textTertiaryColor)
+                }
                     .font(.title)
                     .fontWeight(.medium)
+                    .foregroundColor(currentTheme.textPrimaryColor) // color of typed input
                     .padding()
                     .keyboardType(.default)
                     .onSubmit {
@@ -58,6 +62,20 @@ struct SearchSheetView: View {
         dismiss()
     }
 }
+
+extension View {
+    func placeholder<Content: View>(
+        when shouldShow: Bool,
+        alignment: Alignment = .leading,
+        @ViewBuilder placeholder: () -> Content) -> some View {
+
+        ZStack(alignment: alignment) {
+            placeholder().opacity(shouldShow ? 1 : 0)
+            self
+        }
+    }
+}
+
 
 struct SearchSheetView_Previews: PreviewProvider {
     static var previews: some View {

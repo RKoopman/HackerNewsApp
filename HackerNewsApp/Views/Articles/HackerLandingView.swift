@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ColorLibrary
 
 struct HackerLandingView: View {
     
@@ -25,17 +26,17 @@ struct HackerLandingView: View {
                 Text("h")
                     .font(.system(size: 190))
                     .fontWeight(.light)
-                    .foregroundColor(.lightGrey00)
+                    .foregroundColor(.appColor(.lightGrey00))
                     .frame(width: 250)
                     .clipShape(Circle())
                     .shadow(radius: 10)
-                    .overlay(Circle().stroke(.grey00, lineWidth: 5))
+                    .overlay(Circle().stroke(Color.appColor(.grey00), lineWidth: 5))
                 
                 Text("Hacker News")
                     .font(.largeTitle)
                     .fontWeight(.heavy)
 //                    .padding(12)
-                    .foregroundColor(.lightGrey00)
+                    .foregroundColor(.appColor(.lightGrey00))
                 
                 VStack {
                     Spacer()
@@ -44,7 +45,7 @@ struct HackerLandingView: View {
                         .font(.callout)
                         .fontWeight(.heavy)
                         .padding(20)
-                        .foregroundColor(.lightGrey00)
+                        .foregroundColor(.appColor(.lightGrey00))
                     
                     Spacer()
                 }

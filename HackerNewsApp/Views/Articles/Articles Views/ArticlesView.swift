@@ -26,7 +26,7 @@ struct ArticlesView: View {
                     } label: {
                         ArticleCell(points: post.points, title: post.title, url: post.url ?? " ")
                     }
-                    .swipeActions(edge: .leading) {
+                    .swipeActions(edge: .leading, allowsFullSwipe: false) {
                         Button(action: {
                             print("Favorite me")
                             savedPosts.posts.append(post)
@@ -52,7 +52,6 @@ struct ArticlesView: View {
             }
         }
         .environmentObject(networkManager)
-//        .environmentObject(currentTheme)
         .onAppear {
             self.networkManager.fetchData(callURL: "https://hn.algolia.com/api/v1/search?tags=front_page")
         }

@@ -18,6 +18,7 @@
 		505A9BE329C4F49E004B5B07 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505A9BE229C4F49E004B5B07 /* HeaderView.swift */; };
 		505A9BE629C4FCDE004B5B07 /* SavedArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505A9BE529C4FCDE004B5B07 /* SavedArticlesView.swift */; };
 		505A9BE829C502DF004B5B07 /* SavedPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505A9BE729C502DF004B5B07 /* SavedPosts.swift */; };
+		507C0A2B2B62DA4E001D5974 /* ColorLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 507C0A2A2B62DA4E001D5974 /* ColorLibrary */; };
 		50826ADD29AE226800365802 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50826ADC29AE226800365802 /* ButtonsView.swift */; };
 		50826ADF29AEBBD200365802 /* SearchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50826ADE29AEBBD200365802 /* SearchButtonView.swift */; };
 		50826B5129AFA44600365802 /* SearchSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50826B5029AFA44600365802 /* SearchSheetView.swift */; };
@@ -31,9 +32,7 @@
 		508889EF28BD5B5A008E1C56 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508889EE28BD5B5A008E1C56 /* FilterManager.swift */; };
 		50A86D102B07BEB0007E2056 /* HackerLandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A86D0F2B07BEB0007E2056 /* HackerLandingView.swift */; };
 		50A86D122B07D34C007E2056 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A86D112B07D34C007E2056 /* MainView.swift */; };
-		50D3DE3B28E8F67700756248 /* HackerColorCatalog.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D3DE3A28E8F67700756248 /* HackerColorCatalog.xcassets */; };
 		50D3DE3F28F57E0800756248 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D3DE3E28F57E0800756248 /* Themes.swift */; };
-		50D3DE4128F5883E00756248 /* Colors+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D3DE4028F5883E00756248 /* Colors+Extensions.swift */; };
 		7C929F1A26977A8F002E9041 /* HackerNewsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929F1926977A8F002E9041 /* HackerNewsAppApp.swift */; };
 		7C929F1C26977A8F002E9041 /* HackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929F1B26977A8F002E9041 /* HackerView.swift */; };
 		7C929F1E26977A90002E9041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C929F1D26977A90002E9041 /* Assets.xcassets */; };
@@ -83,9 +82,7 @@
 		508889EE28BD5B5A008E1C56 /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
 		50A86D0F2B07BEB0007E2056 /* HackerLandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerLandingView.swift; sourceTree = "<group>"; };
 		50A86D112B07D34C007E2056 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		50D3DE3A28E8F67700756248 /* HackerColorCatalog.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HackerColorCatalog.xcassets; sourceTree = "<group>"; };
 		50D3DE3E28F57E0800756248 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
-		50D3DE4028F5883E00756248 /* Colors+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Extensions.swift"; sourceTree = "<group>"; };
 		7C929F1626977A8F002E9041 /* HackerNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C929F1926977A8F002E9041 /* HackerNewsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsAppApp.swift; sourceTree = "<group>"; };
 		7C929F1B26977A8F002E9041 /* HackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerView.swift; sourceTree = "<group>"; };
@@ -104,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				507C0A2B2B62DA4E001D5974 /* ColorLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				7C929F1D26977A90002E9041 /* Assets.xcassets */,
-				50D3DE3A28E8F67700756248 /* HackerColorCatalog.xcassets */,
 			);
 			path = "Assets and Colors";
 			sourceTree = "<group>";
@@ -224,7 +221,6 @@
 				50D3DE3C28F57D2100756248 /* Assets and Colors */,
 				50D3DE3E28F57E0800756248 /* Themes.swift */,
 				5087FD852B163A8E00DFD255 /* ThemeSetter.swift */,
-				50D3DE4028F5883E00756248 /* Colors+Extensions.swift */,
 			);
 			path = Themes;
 			sourceTree = "<group>";
@@ -296,6 +292,9 @@
 			dependencies = (
 			);
 			name = HackerNewsApp;
+			packageProductDependencies = (
+				507C0A2A2B62DA4E001D5974 /* ColorLibrary */,
+			);
 			productName = HackerNewsApp;
 			productReference = 7C929F1626977A8F002E9041 /* HackerNewsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -368,6 +367,9 @@
 				Base,
 			);
 			mainGroup = 7C929F0D26977A8F002E9041;
+			packageReferences = (
+				507C0A292B62DA4E001D5974 /* XCRemoteSwiftPackageReference "ColorLibrary" */,
+			);
 			productRefGroup = 7C929F1726977A8F002E9041 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -385,7 +387,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C929F1E26977A90002E9041 /* Assets.xcassets in Resources */,
-				50D3DE3B28E8F67700756248 /* HackerColorCatalog.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +437,6 @@
 				505A9BE129C4F148004B5B07 /* ArticlesView.swift in Sources */,
 				50826ADF29AEBBD200365802 /* SearchButtonView.swift in Sources */,
 				5017A91B2AF3E86000E914D8 /* ThemeExpandedView.swift in Sources */,
-				50D3DE4128F5883E00756248 /* Colors+Extensions.swift in Sources */,
 				505A9BE329C4F49E004B5B07 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -769,6 +769,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		507C0A292B62DA4E001D5974 /* XCRemoteSwiftPackageReference "ColorLibrary" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RKoopman/ColorLibrary";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		507C0A2A2B62DA4E001D5974 /* ColorLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 507C0A292B62DA4E001D5974 /* XCRemoteSwiftPackageReference "ColorLibrary" */;
+			productName = ColorLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7C929F0E26977A8F002E9041 /* Project object */;
 }

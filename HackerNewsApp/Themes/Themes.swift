@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import ColorLibrary
 
 class Theme: Identifiable {
     
@@ -82,82 +83,99 @@ class Theme: Identifiable {
         }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class AllThemes {
     var themes: [Theme] = [
 
         Theme(
             id: 00,
             
-            brandPrimaryColor: .navyBlue00,
-            brandSecondaryColor: .lightBlue70,
-            brandTertiaryColor: .lightBlue20,
+            brandPrimaryColor: .appColor(.navyBlue00),
+            brandSecondaryColor: .appColor(.lightBlue70),
+            brandTertiaryColor: .appColor(.lightBlue20),
             
-            backgroundPrimaryColor: .lightGrey00,
-            backgroundSecondaryColor: .lightGrey80,
-            contrastBackgroundPrimaryColor: .grey00,
-            contrastBackgroundSecondaryColor: .grey40,
+            backgroundPrimaryColor: .appColor(.lightGrey00),
+            backgroundSecondaryColor: .appColor(.lightGrey80),
+            contrastBackgroundPrimaryColor: .appColor(.grey00),
+            contrastBackgroundSecondaryColor: .appColor(.grey40),
             
-            textPrimaryColor: .black10,
-            textSecondaryColor: .grey40,
-            textTertiaryColor: .lightGrey20,
+            textPrimaryColor: .appColor(.black10),
+            textSecondaryColor: .appColor(.grey40),
+            textTertiaryColor: .appColor(.lightGrey20),
             
-            buttonTextPrimaryColor: .lightGrey20,
-            buttonTextSecondaryColor: .black10,
+            buttonTextPrimaryColor: .appColor(.lightGrey20),
+            buttonTextSecondaryColor: .appColor(.black10),
             
-            buttonBackgroundPrimaryColor: .navyBlue00,
-            buttonBackgroundSecondaryColor: .blue30,
-            buttonContructiveColor: .lightBlue30,
-            buttonDestructiveColor: .red50
+            buttonBackgroundPrimaryColor: .appColor(.navyBlue00),
+            buttonBackgroundSecondaryColor: .appColor(.blue30),
+            buttonContructiveColor: .appColor(.lightBlue30),
+            buttonDestructiveColor: .appColor(.red50)
         ),
         
         Theme(
             id: 01,
             
-            brandPrimaryColor: .forestGreen40,
-            brandSecondaryColor: .green20,
-            brandTertiaryColor: .green80,
+            brandPrimaryColor: .appColor(.forestGreen40),
+            brandSecondaryColor: .appColor(.forestGreen20),
+            brandTertiaryColor: .appColor(.green80),
             
-            backgroundPrimaryColor: .lightGrey00,
-            backgroundSecondaryColor: .lightGrey80,
-            contrastBackgroundPrimaryColor: .grey00,
-            contrastBackgroundSecondaryColor: .grey40,
+            backgroundPrimaryColor: .appColor(.lightGrey00),
+            backgroundSecondaryColor: .appColor(.lightGrey80),
+            contrastBackgroundPrimaryColor: .appColor(.grey00),
+            contrastBackgroundSecondaryColor: .appColor(.grey40),
             
-            textPrimaryColor: .black10,
-            textSecondaryColor: .grey40,
-            textTertiaryColor: .lightGrey20,
+            textPrimaryColor: .appColor(.black10),
+            textSecondaryColor: .appColor(.grey40),
+            textTertiaryColor: .appColor(.lightGrey20),
             
-            buttonTextPrimaryColor: .lightGrey20,
-            buttonTextSecondaryColor: .black10,
+            buttonTextPrimaryColor: .appColor(.lightGrey20),
+            buttonTextSecondaryColor: .appColor(.black10),
             
-            buttonBackgroundPrimaryColor: .forestGreen10,
-            buttonBackgroundSecondaryColor: .green20,
-            buttonContructiveColor: .lightBlue30,
-            buttonDestructiveColor: .red50
+            buttonBackgroundPrimaryColor: .appColor(.forestGreen10),
+            buttonBackgroundSecondaryColor: .appColor(.forestGreen20),
+            buttonContructiveColor: .appColor(.lightBlue30),
+            buttonDestructiveColor: .appColor(.red50)
         ),
         
         Theme(
             id: 02,
             
-            brandPrimaryColor: .orange80,
-            brandSecondaryColor: .orange40,
-            brandTertiaryColor: .orange10,
+            brandPrimaryColor: .appColor(.orange80),
+            brandSecondaryColor: .appColor(.orange40),
+            brandTertiaryColor: .appColor(.orange10),
             
-            backgroundPrimaryColor: .darkGrey80,
-            backgroundSecondaryColor: .darkGrey00,
-            contrastBackgroundPrimaryColor: .lightBlue10,
-            contrastBackgroundSecondaryColor: .purple00,
+            backgroundPrimaryColor: .appColor(.darkGrey80),
+            backgroundSecondaryColor: .appColor(.darkGrey00),
+            contrastBackgroundPrimaryColor: .appColor(.lightBlue10),
+            contrastBackgroundSecondaryColor: .appColor(.purple00),
             
-            textPrimaryColor: .lightGrey00,
-            textSecondaryColor: .grey10,
-            textTertiaryColor: .lightGrey20,
+            textPrimaryColor: .appColor(.lightGrey00),
+            textSecondaryColor: .appColor(.grey10),
+            textTertiaryColor: .appColor(.lightGrey30),
             
-            buttonTextPrimaryColor: .darkGrey60,
-            buttonTextSecondaryColor: .lightGrey00,
+            buttonTextPrimaryColor: .appColor(.darkGrey60),
+            buttonTextSecondaryColor: .appColor(.lightGrey00),
             
-            buttonBackgroundPrimaryColor: .orange80,
-            buttonBackgroundSecondaryColor: .orange40,
-            buttonContructiveColor: .lightBlue30,
-            buttonDestructiveColor: .red50
+            buttonBackgroundPrimaryColor: .appColor(.orange80),
+            buttonBackgroundSecondaryColor: .appColor(.orange40),
+            buttonContructiveColor: .appColor(.lightBlue30),
+            buttonDestructiveColor: .appColor(.red50)
         )
 
     ]

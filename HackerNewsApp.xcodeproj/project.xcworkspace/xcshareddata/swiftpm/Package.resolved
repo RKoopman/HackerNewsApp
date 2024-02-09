@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "colorlibrary",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RKoopman/ColorLibrary",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e2e1d1ad31a3610ded195ce10cd164170fcbbe3a"
+      }
+    }
+  ],
+  "version" : 2
+}

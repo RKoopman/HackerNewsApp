@@ -26,7 +26,7 @@ struct ArticlesView: View {
                     } label: {
                         ArticleCell(points: post.points, title: post.title, url: post.url ?? " ")
                     }
-                    .swipeActions(edge: .leading) {
+                    .swipeActions(edge: .leading, allowsFullSwipe: false) {
                         Button(action: {
                             print("Favorite me")
                             savedPosts.posts.append(post)

@@ -32,11 +32,12 @@ struct ThemeExpandedView: View {
                 Button("\(theme.id)") {
                     UserDefaults.standard.set(themeIndex, forKey: "selectedTheme")
                 }
-                .buttonStyle(ThemeSettingsView(brand: theme.brandPrimaryColor,
-                                               background: theme.backgroundPrimaryColor,
-                                               text: theme.textPrimaryColor,
-                                               button: theme.buttonBackgroundPrimaryColor,
-                                               textSecondary: theme.textSecondaryColor))
+                .buttonStyle(
+                    ThemeSettingsView(brand: theme.brandPrimaryColor,
+                                      background: theme.backgroundPrimaryColor,
+                                      button: theme.buttonBackgroundPrimaryColor,
+                                      frameSize: 50)
+                )
             }
         }
     }

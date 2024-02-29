@@ -5,82 +5,110 @@
 //  Created by R K on 10/11/22.
 //
 
-import Foundation
 import SwiftUI
+import UIKit
 import ColorLibrary
 
-class Theme: Identifiable {
+protocol Theme {
     
-    var id: Int
+    var id: Int { get }
     
-    var brandPrimaryColor: Color
-    var brandSecondaryColor: Color
-    var brandTertiaryColor: Color
+    var brandPrimaryColor: Color { get }
+    var brandSecondaryColor: Color { get }
+    var brandTertiaryColor: Color { get }
 
-    var backgroundPrimaryColor: Color
-    var backgroundSecondaryColor: Color
-    var contrastBackgroundPrimaryColor: Color
-    var contrastBackgroundSecondaryColor: Color
+    var backgroundPrimaryColor: Color { get }
+    var backgroundSecondaryColor: Color { get }
+    var contrastBackgroundPrimaryColor: Color { get }
+    var contrastBackgroundSecondaryColor: Color { get }
     
-    var textPrimaryColor: Color
-    var textSecondaryColor: Color
-    var textTertiaryColor: Color
+    var textPrimaryColor: Color { get }
+    var textSecondaryColor: Color { get }
+    var textTertiaryColor: Color { get }
     
-    var buttonTextPrimaryColor: Color
-    var buttonTextSecondaryColor: Color
+    var buttonTextPrimaryColor: Color { get }
+    var buttonTextSecondaryColor: Color { get }
 
-    var buttonBackgroundPrimaryColor: Color
-    var buttonBackgroundSecondaryColor: Color
-    var buttonContructiveColor: Color
-    var buttonDestructiveColor: Color
+    var buttonBackgroundPrimaryColor: Color { get }
+    var buttonBackgroundSecondaryColor: Color { get }
+    var buttonContructiveColor: Color { get }
+    var buttonDestructiveColor: Color { get }
+}
 
-    init(
-        id: Int,
-        
-        brandPrimaryColor: Color,
-        brandSecondaryColor: Color,
-        brandTertiaryColor: Color,
 
-        backgroundPrimaryColor: Color,
-        backgroundSecondaryColor: Color,
-        contrastBackgroundPrimaryColor: Color,
-        contrastBackgroundSecondaryColor: Color,
+struct Theme00: Theme {
+    var id: Int = 00
     
-        textPrimaryColor: Color,
-        textSecondaryColor: Color,
-        textTertiaryColor: Color,
+    var brandPrimaryColor: Color = .appColor(.navyBlue00)
+    var brandSecondaryColor: Color = .appColor(.lightBlue70)
+    var brandTertiaryColor: Color = .appColor(.lightBlue20)
     
-        buttonTextPrimaryColor: Color,
-        buttonTextSecondaryColor: Color,
+    var backgroundPrimaryColor: Color = .appColor(.lightGrey00)
+    var backgroundSecondaryColor: Color = .appColor(.lightGrey80)
+    var contrastBackgroundPrimaryColor: Color = .appColor(.grey00)
+    var contrastBackgroundSecondaryColor: Color = .appColor(.grey40)
+    
+    var textPrimaryColor: Color = .appColor(.black10)
+    var textSecondaryColor: Color = .appColor(.grey40)
+    var textTertiaryColor: Color = .appColor(.lightGrey20)
+    
+    var buttonTextPrimaryColor: Color = .appColor(.lightGrey20)
+    var buttonTextSecondaryColor: Color = .appColor(.black10)
+    
+    var buttonBackgroundPrimaryColor: Color = .appColor(.navyBlue00)
+    var buttonBackgroundSecondaryColor: Color = .appColor(.blue30)
+    var buttonContructiveColor: Color = .appColor(.lightBlue30)
+    var buttonDestructiveColor: Color = .appColor(.red50)
+}
 
-        buttonBackgroundPrimaryColor: Color,
-        buttonBackgroundSecondaryColor: Color,
-        buttonContructiveColor: Color,
-        buttonDestructiveColor: Color) {
-            
-            self.id = id
-        
-            self.brandPrimaryColor = brandPrimaryColor
-            self.brandSecondaryColor = brandSecondaryColor
-            self.brandTertiaryColor = brandTertiaryColor
-        
-            self.backgroundPrimaryColor = backgroundPrimaryColor
-            self.backgroundSecondaryColor = backgroundSecondaryColor
-            self.contrastBackgroundPrimaryColor = contrastBackgroundPrimaryColor
-            self.contrastBackgroundSecondaryColor = contrastBackgroundSecondaryColor
-        
-            self.textPrimaryColor = textPrimaryColor
-            self.textSecondaryColor = textSecondaryColor
-            self.textTertiaryColor = textTertiaryColor
-            
-            self.buttonTextPrimaryColor = buttonTextPrimaryColor
-            self.buttonTextSecondaryColor = buttonTextSecondaryColor
-        
-            self.buttonBackgroundPrimaryColor = buttonBackgroundPrimaryColor
-            self.buttonBackgroundSecondaryColor = buttonBackgroundSecondaryColor
-            self.buttonContructiveColor = buttonContructiveColor
-            self.buttonDestructiveColor = buttonDestructiveColor
-        }
+struct Theme01: Theme {
+    var id: Int = 01
+    
+    var brandPrimaryColor: Color = .appColor(.forestGreen40)
+    var brandSecondaryColor: Color = .appColor(.forestGreen20)
+    var brandTertiaryColor: Color = .appColor(.green80)
+    
+    var backgroundPrimaryColor: Color = .appColor(.lightGrey00)
+    var backgroundSecondaryColor: Color = .appColor(.lightGrey80)
+    var contrastBackgroundPrimaryColor: Color = .appColor(.grey00)
+    var contrastBackgroundSecondaryColor: Color = .appColor(.grey40)
+    
+    var textPrimaryColor: Color = .appColor(.black10)
+    var textSecondaryColor: Color = .appColor(.grey40)
+    var textTertiaryColor: Color = .appColor(.lightGrey20)
+    
+    var buttonTextPrimaryColor: Color = .appColor(.lightGrey20)
+    var buttonTextSecondaryColor: Color = .appColor(.black10)
+    
+    var buttonBackgroundPrimaryColor: Color = .appColor(.forestGreen10)
+    var buttonBackgroundSecondaryColor: Color = .appColor(.forestGreen20)
+    var buttonContructiveColor: Color = .appColor(.lightBlue30)
+    var buttonDestructiveColor: Color = .appColor(.red50)
+}
+
+struct Theme02: Theme {
+    var id: Int = 02
+    
+    var brandPrimaryColor: Color = .appColor(.orange80)
+    var brandSecondaryColor: Color = .appColor(.orange40)
+    var brandTertiaryColor: Color = .appColor(.orange10)
+    
+    var backgroundPrimaryColor: Color = .appColor(.darkGrey80)
+    var backgroundSecondaryColor: Color = .appColor(.darkGrey00)
+    var contrastBackgroundPrimaryColor: Color = .appColor(.lightBlue10)
+    var contrastBackgroundSecondaryColor: Color = .appColor(.purple00)
+    
+    var textPrimaryColor: Color = .appColor(.lightGrey00)
+    var textSecondaryColor: Color = .appColor(.grey10)
+    var textTertiaryColor: Color = .appColor(.lightGrey30)
+    
+    var buttonTextPrimaryColor: Color = .appColor(.darkGrey60)
+    var buttonTextSecondaryColor: Color = .appColor(.lightGrey00)
+    
+    var buttonBackgroundPrimaryColor: Color = .appColor(.orange80)
+    var buttonBackgroundSecondaryColor: Color = .appColor(.orange40)
+    var buttonContructiveColor: Color = .appColor(.lightBlue30)
+    var buttonDestructiveColor: Color = .appColor(.red50)
 }
 
 
@@ -95,88 +123,8 @@ class Theme: Identifiable {
 
 
 
-
-
-
-
-
-class AllThemes {
-    var themes: [Theme] = [
-
-        Theme(
-            id: 00,
-            
-            brandPrimaryColor: .appColor(.navyBlue00),
-            brandSecondaryColor: .appColor(.lightBlue70),
-            brandTertiaryColor: .appColor(.lightBlue20),
-            
-            backgroundPrimaryColor: .appColor(.lightGrey00),
-            backgroundSecondaryColor: .appColor(.lightGrey80),
-            contrastBackgroundPrimaryColor: .appColor(.grey00),
-            contrastBackgroundSecondaryColor: .appColor(.grey40),
-            
-            textPrimaryColor: .appColor(.black10),
-            textSecondaryColor: .appColor(.grey40),
-            textTertiaryColor: .appColor(.lightGrey20),
-            
-            buttonTextPrimaryColor: .appColor(.lightGrey20),
-            buttonTextSecondaryColor: .appColor(.black10),
-            
-            buttonBackgroundPrimaryColor: .appColor(.navyBlue00),
-            buttonBackgroundSecondaryColor: .appColor(.blue30),
-            buttonContructiveColor: .appColor(.lightBlue30),
-            buttonDestructiveColor: .appColor(.red50)
-        ),
-        
-        Theme(
-            id: 01,
-            
-            brandPrimaryColor: .appColor(.forestGreen40),
-            brandSecondaryColor: .appColor(.forestGreen20),
-            brandTertiaryColor: .appColor(.green80),
-            
-            backgroundPrimaryColor: .appColor(.lightGrey00),
-            backgroundSecondaryColor: .appColor(.lightGrey80),
-            contrastBackgroundPrimaryColor: .appColor(.grey00),
-            contrastBackgroundSecondaryColor: .appColor(.grey40),
-            
-            textPrimaryColor: .appColor(.black10),
-            textSecondaryColor: .appColor(.grey40),
-            textTertiaryColor: .appColor(.lightGrey20),
-            
-            buttonTextPrimaryColor: .appColor(.lightGrey20),
-            buttonTextSecondaryColor: .appColor(.black10),
-            
-            buttonBackgroundPrimaryColor: .appColor(.forestGreen10),
-            buttonBackgroundSecondaryColor: .appColor(.forestGreen20),
-            buttonContructiveColor: .appColor(.lightBlue30),
-            buttonDestructiveColor: .appColor(.red50)
-        ),
-        
-        Theme(
-            id: 02,
-            
-            brandPrimaryColor: .appColor(.orange80),
-            brandSecondaryColor: .appColor(.orange40),
-            brandTertiaryColor: .appColor(.orange10),
-            
-            backgroundPrimaryColor: .appColor(.darkGrey80),
-            backgroundSecondaryColor: .appColor(.darkGrey00),
-            contrastBackgroundPrimaryColor: .appColor(.lightBlue10),
-            contrastBackgroundSecondaryColor: .appColor(.purple00),
-            
-            textPrimaryColor: .appColor(.lightGrey00),
-            textSecondaryColor: .appColor(.grey10),
-            textTertiaryColor: .appColor(.lightGrey30),
-            
-            buttonTextPrimaryColor: .appColor(.darkGrey60),
-            buttonTextSecondaryColor: .appColor(.lightGrey00),
-            
-            buttonBackgroundPrimaryColor: .appColor(.orange80),
-            buttonBackgroundSecondaryColor: .appColor(.orange40),
-            buttonContructiveColor: .appColor(.lightBlue30),
-            buttonDestructiveColor: .appColor(.red50)
-        )
-
-    ]
-}
+//class AllThemes {
+//    var themes: [Theme] = [
+//        
+//    ]
+//}

@@ -10,23 +10,26 @@ import SwiftUI
 struct MainView: View {
     
     @State private var showLanding = true
-//    @Environment(\.themeID) var themeID
+    @AppStorage("selectedTheme") var currentThemeIndex: Int = 00
 
     var body: some View {
-        if showLanding == true {
-            HackerLandingView()
-                .onTapGesture {
-                    withAnimation {
-                        showLanding.toggle()
+        let currentTheme = ThemeManager.themes[currentThemeIndex]
+        
+        Group {
+            if showLanding == true {
+                HackerLandingView()
+                    .onTapGesture {
+                        withAnimation {
+                            showLanding.toggle()
+                        }
                     }
-                }
-        } else {
-            HackerView()
-                .transition(.move(edge: .bottom))
+            } else {
+                HackerView()
+                    .transition(.move(edge: .bottom))
+            }
         }
+        .environment(\.theme, currentTheme)
     }
 }
 
-#Preview {
-    MainView()
-}
+

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct InfoBlurb: View {
     
-        let currentTheme = ThemeSetter.shared.getTheme()
 
     var instruction:String = ""
     

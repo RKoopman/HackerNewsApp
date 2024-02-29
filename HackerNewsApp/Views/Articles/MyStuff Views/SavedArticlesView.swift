@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SavedArticlesView: View {
     
-        let currentTheme = ThemeSetter.shared.getTheme()
+    @Environment(\.theme) var theme
 
     @ObservedObject var savedPosts: SavedPosts
     
@@ -41,12 +41,12 @@ struct SavedArticlesView: View {
                                     .foregroundColor(Color.accentColor)
                                     .font(.system(size: 16, weight: .regular))
                             }
-                            .tint(currentTheme.buttonDestructiveColor)
+                            .tint(theme.buttonDestructiveColor)
                         }
                         .listRowBackground(Color.clear)
                     }
                 .listStyle(.plain)
-                .background(currentTheme.backgroundPrimaryColor)
+                .background(theme.backgroundPrimaryColor)
                 InfoBlurb(instruction: "Swipe right on articles to remove them.")
                     .padding(.horizontal)
                 Spacer()

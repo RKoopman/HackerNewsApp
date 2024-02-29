@@ -58,9 +58,3 @@ struct ArticlesView: View {
         }
     }
 }
-
-//struct ArticlesView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ArticlesView()
-//    }
-//}

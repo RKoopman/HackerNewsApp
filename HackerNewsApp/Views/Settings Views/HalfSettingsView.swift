@@ -13,7 +13,6 @@ struct HalfSettingsView: View {
     
     @State var expandedThemeView:Bool = false
 
-    
     var body: some View {
         VStack {
             HStack {
@@ -26,7 +25,6 @@ struct HalfSettingsView: View {
             Divider()
                 .frame(height: 1)
                 .overlay(.gray)
-
             
             Button(action: {
                 expandedThemeView.toggle()
@@ -39,7 +37,6 @@ struct HalfSettingsView: View {
             })
             
             Spacer()
-            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(theme.contrastBackgroundPrimaryColor)

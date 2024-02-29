@@ -24,11 +24,33 @@ struct ThemeCollapsedView: View {
             }
             .padding(.horizontal)
             
-//            ThemeSettingsView(brand: theme.brandPrimaryColor,
-//                              background: theme.backgroundPrimaryColor,
-//                              text: theme.textPrimaryColor,
-//                              button: theme.buttonBackgroundPrimaryColor,
-//                              textSecondary: theme.textSecondaryColor)
+            HStack {
+                    Circle()
+                        .frame(width: 50)
+                        .foregroundColor(theme.brandPrimaryColor)
+                        .shadow(radius: 5)
+                        .overlay(Circle().stroke(Color.appColor(.grey00), lineWidth: 2))
+                    Circle()
+                        .frame(width: 50)
+                        .foregroundColor(theme.backgroundPrimaryColor)
+                        .shadow(radius: 5)
+                        .overlay(Circle().stroke(Color.appColor(.grey00), lineWidth: 2))
+//                    Circle()
+//                        .frame(width: 50)
+//                        .foregroundColor(theme.textPrimaryColor)
+//                        .shadow(radius: 5)
+//                        .overlay(Circle().stroke(Color.appColor(.grey00), lineWidth: 2))
+//                    Circle()
+//                        .frame(width: 50)
+//                        .foregroundColor(theme.textSecondaryColor)
+//                        .shadow(radius: 5)
+//                        .overlay(Circle().stroke(Color.appColor(.grey00), lineWidth: 2))
+                    Circle()
+                        .frame(width: 50)
+                        .foregroundColor(theme.buttonBackgroundPrimaryColor)
+                        .shadow(radius: 5)
+                        .overlay(Circle().stroke(Color.appColor(.grey00), lineWidth: 2))
+                }
         }
     }
 }

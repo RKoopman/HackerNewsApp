@@ -43,21 +43,13 @@ struct SavedArticlesView: View {
                             }
                             .tint(theme.buttonDestructiveColor)
                         }
-                        .listRowBackground(Color.clear)
-                    }
+                }
                 .listStyle(.plain)
-                .background(theme.backgroundPrimaryColor)
                 InfoBlurb(instruction: "Swipe right on articles to remove them.")
                     .padding(.horizontal)
                 Spacer()
             }
         }
+        .background(theme.backgroundPrimaryColor)
     }
 }
-
-
-//struct SavedArticlesView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SavedArticlesView(savedPosts: SavedPosts.)
-//    }
-//}

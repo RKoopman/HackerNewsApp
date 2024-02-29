@@ -18,7 +18,7 @@ struct HalfSettingsView: View {
             HStack {
                 Text("Settings")
                     .font(.title)
-                    .padding(.horizontal)
+                    .padding()
                 Spacer()
             }
             
@@ -31,8 +31,10 @@ struct HalfSettingsView: View {
             }, label: {
                 if expandedThemeView == true {
                     ThemeExpandedView()
+                        .transition(.move(edge: .trailing))
                 } else {
                     ThemeCollapsedView()
+                        .transition(.move(edge: .leading))
                 }
             })
             

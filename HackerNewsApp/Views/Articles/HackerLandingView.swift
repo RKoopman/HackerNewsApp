@@ -10,9 +10,6 @@ import ColorLibrary
 
 struct HackerLandingView: View {
     
-//    @Environment(\.theme) var theme
-
-    
     var body: some View {
         ZStack {
             Image("HLandingImage")

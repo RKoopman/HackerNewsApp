@@ -32,7 +32,3 @@ struct ArticleCell: View {
         }
     }
 }
-
-//#Preview {
-//    ArticleCell(currentTheme: Theme, points: <#T##String#>, title: <#T##String#>, url: <#T##String#>)
-//}

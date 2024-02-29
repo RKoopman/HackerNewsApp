@@ -10,6 +10,7 @@ import SwiftUI
 struct ButtonsView: View {
     
     @Environment(\.theme) var theme
+    
     let filterManager = FilterManager.shared
 
     var body: some View {

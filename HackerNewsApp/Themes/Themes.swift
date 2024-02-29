@@ -94,9 +94,9 @@ struct Theme02: Theme {
     var brandTertiaryColor: Color = .appColor(.orange10)
     
     var backgroundPrimaryColor: Color = .appColor(.darkGrey80)
-    var backgroundSecondaryColor: Color = .appColor(.darkGrey00)
-    var contrastBackgroundPrimaryColor: Color = .appColor(.lightBlue10)
-    var contrastBackgroundSecondaryColor: Color = .appColor(.purple00)
+    var backgroundSecondaryColor: Color = .appColor(.darkGrey40)
+    var contrastBackgroundPrimaryColor: Color = .appColor(.grey30)
+    var contrastBackgroundSecondaryColor: Color = .appColor(.grey90)
     
     var textPrimaryColor: Color = .appColor(.lightGrey00)
     var textSecondaryColor: Color = .appColor(.grey10)

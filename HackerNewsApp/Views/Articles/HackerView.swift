@@ -13,11 +13,6 @@ struct HackerView: View {
 
     @StateObject var savedPosts = SavedPosts()
     @State var isSettingsShown:Bool = false
-
-//    init() {
-//        UITabBar.appearance().backgroundColor = UIColor(theme.backgroundPrimaryColor)
-//    }
-    
     
     var body: some View {
             TabView {

@@ -12,10 +12,8 @@ struct FilterButton: View {
     @EnvironmentObject var networkManager: NetworkManager
     @Environment(\.theme) var theme
 
-
     var buttonText: String
     var buttonURL : String
-    
     
     var body: some View {
         Button(action: {

@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ArticlesView: View {
     
+    @Environment(\.theme) var theme
+
     @StateObject var networkManager = NetworkManager()
     @ObservedObject var savedPosts: SavedPosts
-    let currentTheme = ThemeSetter.shared.getTheme()
 
     
     var body: some View {
@@ -36,14 +37,14 @@ struct ArticlesView: View {
                             Image(systemName: "bookmark", variableValue: 1.00)
                                 .symbolRenderingMode(.monochrome)
                                 .font(.system(size: 16, weight: .regular))
-                                .foregroundColor(currentTheme.buttonTextPrimaryColor)
+                                .foregroundColor(theme.buttonTextPrimaryColor)
                         }
-                        .tint(currentTheme.buttonContructiveColor)
+                        .tint(theme.buttonContructiveColor)
                     }
                     .listRowBackground(Color.clear)
                 }
                 .listStyle(.plain)
-                .background(currentTheme.backgroundPrimaryColor)
+                .background(theme.backgroundPrimaryColor)
                 .refreshable {
                     self.networkManager.reFetchData()
                 }

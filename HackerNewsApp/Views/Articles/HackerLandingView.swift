@@ -10,7 +10,7 @@ import ColorLibrary
 
 struct HackerLandingView: View {
     
-    let currentTheme = ThemeSetter.shared.getTheme()
+//    @Environment(\.theme) var theme
 
     
     var body: some View {
@@ -35,7 +35,6 @@ struct HackerLandingView: View {
                 Text("Hacker News")
                     .font(.largeTitle)
                     .fontWeight(.heavy)
-//                    .padding(12)
                     .foregroundColor(.appColor(.lightGrey00))
                 
                 VStack {

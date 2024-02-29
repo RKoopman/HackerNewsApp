@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct HackerView: View {
-    
+
+    @Environment(\.theme) var theme
+
     @StateObject var savedPosts = SavedPosts()
     @State var isSettingsShown:Bool = false
-    let currentTheme = ThemeSetter.shared.getTheme()
 
-    init() {
-        UITabBar.appearance().backgroundColor = UIColor(currentTheme.backgroundPrimaryColor)
-    }
+//    init() {
+//        UITabBar.appearance().backgroundColor = UIColor(theme.backgroundPrimaryColor)
+//    }
     
     
     var body: some View {
@@ -30,7 +31,7 @@ struct HackerView: View {
                         Label("Saved", systemImage: "bookmark.circle")
                     }
             }
-            .tint(currentTheme.brandPrimaryColor) // tabbar icon colors
+            .tint(theme.brandPrimaryColor)
             .onShake {
                 isSettingsShown.toggle()
                 print(isSettingsShown)

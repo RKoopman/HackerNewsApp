@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ArticleCell: View {
     
-    let currentTheme = ThemeSetter.shared.getTheme()
+    @Environment(\.theme) var theme
 
     var points:Int
     var title:String
@@ -20,14 +20,14 @@ struct ArticleCell: View {
         HStack {
             Text(String(points))
                 .padding(.horizontal, 3)
-                .foregroundColor(currentTheme.textPrimaryColor)
+                .foregroundColor(theme.textPrimaryColor)
             VStack(alignment: .leading) {
                 Text(title)
-                    .foregroundColor(currentTheme.textPrimaryColor)
+                    .foregroundColor(theme.textPrimaryColor)
                 Text(url)
                     .font(.system(size: 10))
                     .lineLimit(1)
-                    .foregroundColor(currentTheme.textSecondaryColor)
+                    .foregroundColor(theme.textSecondaryColor)
             }
         }
     }

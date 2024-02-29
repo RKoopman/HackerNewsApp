@@ -11,8 +11,9 @@ struct SearchSheetView: View {
     @Environment(\.dismiss) var dismiss
 
     @EnvironmentObject var networkManager: NetworkManager
+    @Environment(\.theme) var theme
+
     @State private var searchText: String = ""
-    let currentTheme = ThemeSetter.shared.getTheme()
 
 
     var body: some View {
@@ -21,11 +22,11 @@ struct SearchSheetView: View {
                 Spacer()
                 TextField("", text: $searchText)
                     .placeholder(when: searchText.isEmpty) {
-                        Text("Seach . . . ").foregroundColor(currentTheme.textTertiaryColor)
+                        Text("Seach . . . ").foregroundColor(theme.textTertiaryColor)
                 }
                     .font(.title)
                     .fontWeight(.medium)
-                    .foregroundColor(currentTheme.textPrimaryColor) // color of typed input
+                    .foregroundColor(theme.textPrimaryColor) // color of typed input
                     .padding()
                     .keyboardType(.default)
                     .onSubmit {
@@ -47,14 +48,14 @@ struct SearchSheetView: View {
                 .fontWeight(.semibold)
                 .padding(.horizontal, 20)
                 .padding(.vertical, 10)
-                .foregroundColor(currentTheme.buttonTextPrimaryColor)
-                .background(currentTheme.buttonBackgroundSecondaryColor)
+                .foregroundColor(theme.buttonTextPrimaryColor)
+                .background(theme.buttonBackgroundSecondaryColor)
                 .cornerRadius(8)
                 Spacer()
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(currentTheme.backgroundPrimaryColor)
+        .background(theme.backgroundPrimaryColor)
     }
        
     private func searchCall() {

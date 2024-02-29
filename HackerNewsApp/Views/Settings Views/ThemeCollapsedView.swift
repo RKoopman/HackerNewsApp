@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ThemeCollapsedView: View {
     
-    let currentTheme = ThemeSetter.shared.getTheme()
-    
+    @Environment(\.theme) var theme
+
     
     var body: some View {
         VStack {
@@ -24,11 +24,11 @@ struct ThemeCollapsedView: View {
             }
             .padding(.horizontal)
             
-            ThemeSettingsView(brand: currentTheme.brandPrimaryColor,
-                              background: currentTheme.backgroundPrimaryColor,
-                              text: currentTheme.textPrimaryColor,
-                              button: currentTheme.buttonBackgroundPrimaryColor,
-                              textSecondary: currentTheme.textSecondaryColor)
+//            ThemeSettingsView(brand: theme.brandPrimaryColor,
+//                              background: theme.backgroundPrimaryColor,
+//                              text: theme.textPrimaryColor,
+//                              button: theme.buttonBackgroundPrimaryColor,
+//                              textSecondary: theme.textSecondaryColor)
         }
     }
 }

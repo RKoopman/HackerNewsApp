@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HalfSettingsView: View {
     
-    let currentTheme = ThemeSetter.shared.getTheme()
+    @Environment(\.theme) var theme
+    
     @State var expandedThemeView:Bool = false
 
     
@@ -41,7 +42,7 @@ struct HalfSettingsView: View {
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(currentTheme.contrastBackgroundPrimaryColor)
+        .background(theme.contrastBackgroundPrimaryColor)
     }
 }
 

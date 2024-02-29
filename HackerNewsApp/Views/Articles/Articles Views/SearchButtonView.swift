@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchButtonView: View {
     
-    let currentTheme = ThemeSetter.shared.getTheme()
+    @Environment(\.theme) var theme
 
     @State private var showingSearchSheet = false
 
@@ -21,12 +21,12 @@ struct SearchButtonView: View {
                 hapticFB.impactOccurred()
         }) {
             Image(systemName: "magnifyingglass")
-                .foregroundColor(currentTheme.buttonTextPrimaryColor)
+                .foregroundColor(theme.buttonTextPrimaryColor)
                 .font(Font.body.weight(.heavy))
                 .padding(.horizontal, 12)
                 .padding(.vertical, 12)
         }
-        .background(currentTheme.brandPrimaryColor)
+        .background(theme.brandPrimaryColor)
         .cornerRadius(5.0)
         .shadow(radius: 2)
         .sheet(isPresented: $showingSearchSheet) {

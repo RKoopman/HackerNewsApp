@@ -1,8 +1,8 @@
 //
-//  ThemeSetter.swift
+//  ThemeManager.swift
 //  HackerNewsApp
 //
-//  Created by R K on 11/28/23.
+//  Created by R K on 2/29/24.
 //
 
 import Foundation

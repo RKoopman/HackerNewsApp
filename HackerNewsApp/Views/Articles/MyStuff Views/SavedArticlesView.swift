@@ -10,7 +10,7 @@ import SwiftUI
 struct SavedArticlesView: View {
     
     @Environment(\.theme) var theme
-
+    @StateObject var networkManager = NetworkManager()
     @ObservedObject var savedPosts: SavedPosts
     
     var body: some View {
@@ -24,13 +24,13 @@ struct SavedArticlesView: View {
                     .padding(.horizontal)
                 Spacer()
             } else {
-                List(savedPosts.posts) { post in
+                List(savedPosts.getSavedPosts()) { post in
                         NavigationLink {
                             DetailView(url: post.url)
                         } label: {
                             ArticleCell(points: post.points, title: post.title, url: post.url ?? " ")
                         }
-                        .swipeActions(edge: .leading) {
+                        .swipeActions(edge: .leading, allowsFullSwipe: false) {
                             Button(action: {
                                 print("Unfavorite me")
                                 savedPosts.remove(item: post)
@@ -51,5 +51,6 @@ struct SavedArticlesView: View {
             }
         }
         .background(theme.backgroundPrimaryColor)
+        .environmentObject(networkManager)
     }
 }

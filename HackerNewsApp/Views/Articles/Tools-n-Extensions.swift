@@ -1,5 +1,5 @@
 //
-//  View Extension.swift
+//  Tools-n-Extensions.swift
 //  HackerNewsApp
 //
 //  Created by R K on 11/2/23.
@@ -49,5 +49,12 @@ struct ContentView: View {
             .onShake {
                 print("Device shaken!")
             }
+    }
+}
+
+extension Sequence where Iterator.Element: Hashable {
+    func unique() -> [Iterator.Element] {
+        var seen: Set<Iterator.Element> = []
+        return filter { seen.insert($0).inserted }
     }
 }

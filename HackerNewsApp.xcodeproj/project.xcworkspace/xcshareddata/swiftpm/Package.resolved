@@ -1,4 +1,5 @@
 {
+  "originHash" : "89121570654cc115166d1c8dfcbc1111ede377135e4195a6b8b97513dc9baa1a",
   "pins" : [
     {
       "identity" : "colorlibrary",
@@ -6,9 +7,9 @@
       "location" : "https://github.com/RKoopman/ColorLibrary",
       "state" : {
         "branch" : "main",
-        "revision" : "e2e1d1ad31a3610ded195ce10cd164170fcbbe3a"
+        "revision" : "5a5787e2140ab49a847885fb4ec161af68afc37c"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

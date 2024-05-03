@@ -11,7 +11,7 @@ struct ArticlesView: View {
     
     @Environment(\.theme) var theme
     @StateObject var networkManager = NetworkManager()
-    @ObservedObject var savedPosts: SavedPosts
+    @StateObject var savedPosts = SavedPosts()
 
     
     var body: some View {

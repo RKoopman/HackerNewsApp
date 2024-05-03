@@ -12,6 +12,7 @@ struct HackerNewsAppApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
+//            HackerView()
         }
     }
 }

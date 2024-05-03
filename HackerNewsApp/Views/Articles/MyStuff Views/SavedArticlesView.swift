@@ -11,7 +11,7 @@ struct SavedArticlesView: View {
     
     @Environment(\.theme) var theme
     @StateObject var networkManager = NetworkManager()
-    @ObservedObject var savedPosts: SavedPosts
+    @StateObject var savedPosts: SavedPosts
     
     var body: some View {
         NavigationView {
@@ -25,7 +25,7 @@ struct SavedArticlesView: View {
                         .padding(.horizontal)
                     Spacer()
                 } else {
-                    List(savedPosts.getSavedPosts()) { post in
+                    List(savedPosts.posts) { post in
                             NavigationLink {
                                 DetailView(url: post.url)
                             } label: {

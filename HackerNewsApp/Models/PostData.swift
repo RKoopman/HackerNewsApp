@@ -11,7 +11,7 @@ struct Results: Decodable {
     let hits: [Post]
 }
 
-struct Post: Decodable, Hashable, Identifiable {
+struct Post: Codable, Hashable, Identifiable {
     var id: String {
         return objectID
     }

@@ -16,18 +16,13 @@ struct ButtonsView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) {
             HStack {
-                SearchButtonView()
-                    .padding(.leading, 10)
-                Text("|")
-                    .font(.system(size: 39, weight: .light, design: .serif))
-                    .foregroundColor(theme.buttonTextSecondaryColor)
                 filterManager.setupButton(for: .frontPage)
                 filterManager.setupButton(for: .latest)
                 filterManager.setupButton(for: .apple)
                 filterManager.setupButton(for: .google)
                 filterManager.setupButton(for: .arVr)
             }
-            .padding(.vertical, 10)
+            .padding(10)
         }
         .background(theme.backgroundPrimaryColor)
     }

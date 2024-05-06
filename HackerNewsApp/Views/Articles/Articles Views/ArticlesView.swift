@@ -20,32 +20,37 @@ struct ArticlesView: View {
                 HeaderView(title: "Hacker News")
                     .padding(.bottom, -8)
                 
-                List(networkManager.posts) { post in
-                    NavigationLink {
-                        DetailView(url: post.url)
-                    } label: {
-                        ArticleCell(points: post.points, title: post.title, url: post.url ?? " ")
-                    }
-                    .swipeActions(edge: .leading, allowsFullSwipe: false) {
-                        Button(action: {
-                            print("Favorite me")
-                            savedPosts.posts.append(post)
-                            print(savedPosts.posts)
-                            
-                        }) {
-                            Image(systemName: "bookmark", variableValue: 1.00)
-                                .symbolRenderingMode(.monochrome)
-                                .font(.system(size: 16, weight: .regular))
-                                .foregroundColor(theme.buttonTextPrimaryColor)
+                ZStack (alignment: .bottomLeading) {
+                    List(networkManager.posts) { post in
+                        NavigationLink {
+                            DetailView(url: post.url)
+                        } label: {
+                            ArticleCell(points: post.points, title: post.title, url: post.url ?? " ")
                         }
-                        .tint(theme.buttonContructiveColor)
+                        .swipeActions(edge: .leading, allowsFullSwipe: false) {
+                            Button(action: {
+                                print("Favorite me")
+                                savedPosts.posts.append(post)
+                                print(savedPosts.posts)
+                                
+                            }) {
+                                Image(systemName: "bookmark", variableValue: 1.00)
+                                    .symbolRenderingMode(.monochrome)
+                                    .font(.system(size: 16, weight: .regular))
+                                    .foregroundColor(theme.buttonTextPrimaryColor)
+                            }
+                            .tint(theme.buttonContructiveColor)
+                        }
+                        .listRowBackground(Color.clear)
                     }
-                    .listRowBackground(Color.clear)
-                }
-                .listStyle(.plain)
-                .background(theme.backgroundPrimaryColor)
-                .refreshable {
-                    self.networkManager.reFetchData()
+                    .listStyle(.plain)
+                    .background(theme.backgroundPrimaryColor)
+                    .refreshable {
+                        self.networkManager.reFetchData()
+                    }
+                    SearchButtonView()
+                        .padding(10)
+                        .shadow(radius: 6)
                 }
                 ButtonsView()
                     .padding(.top, -8)

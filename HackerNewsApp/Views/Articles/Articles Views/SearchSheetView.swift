@@ -28,7 +28,7 @@ struct SearchSheetView: View {
                     .fontWeight(.medium)
                     .foregroundColor(theme.textPrimaryColor) // color of typed input
                     .padding()
-                    .keyboardType(.default)
+                    .keyboardType(.webSearch)
                     .onSubmit {
                         searchCall()
                         dismiss()

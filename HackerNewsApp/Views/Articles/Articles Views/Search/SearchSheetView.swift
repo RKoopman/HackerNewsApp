@@ -27,7 +27,7 @@ struct SearchSheetView: View {
                 }
                     .font(.title)
                     .fontWeight(.medium)
-                    .foregroundColor(theme.textPrimaryColor) // color of typed input
+                    .foregroundColor(theme.textPrimaryColor)
                     .padding()
                     .keyboardType(.webSearch)
                     .onSubmit {
@@ -78,10 +78,3 @@ extension View {
         }
     }
 }
-
-
-//struct SearchSheetView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SearchSheetView()
-//    }
-//}

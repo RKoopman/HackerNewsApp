@@ -35,9 +35,3 @@ struct SearchResultsButtonView: View {
         }
     }
 }
-
-//struct SearchResultsButtonView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SearchSheetView()
-//    }
-//}

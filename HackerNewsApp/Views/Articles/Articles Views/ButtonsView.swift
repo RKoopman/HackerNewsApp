@@ -29,13 +29,3 @@ struct ButtonsView: View {
         .background(theme.backgroundPrimaryColor)
     }
 }
-
-//struct ButtonsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        VStack {
-//            Spacer()
-//            ButtonsView()
-//        }
-//    }
-//}
-

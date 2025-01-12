@@ -39,9 +39,3 @@ struct HackerView: View {
             }
     }
 }
-
-//struct HackerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HackerView()
-//    }
-//}

@@ -24,7 +24,3 @@ struct DetailView_Previews: PreviewProvider {
         DetailView(url: "https://www.apple.com")
     }
 }
-
-
-
-

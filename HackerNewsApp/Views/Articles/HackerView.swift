@@ -12,11 +12,13 @@ struct HackerView: View {
     @Environment(\.theme) var theme
 
     @StateObject var savedPosts = SavedPosts()
+    @StateObject var savedSearchStore = SavedSearchStore()
+
     @State var isSettingsShown:Bool = false
     
     var body: some View {
             TabView {
-                ArticlesView(savedPosts: savedPosts)
+                ArticlesView(savedPosts: savedPosts, savedSearchStore: savedSearchStore)
                     .tabItem {
                         Label("Articles", systemImage: "list.dash")
                     }
@@ -38,8 +40,8 @@ struct HackerView: View {
     }
 }
 
-struct HackerView_Previews: PreviewProvider {
-    static var previews: some View {
-        HackerView()
-    }
-}
+//struct HackerView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HackerView()
+//    }
+//}

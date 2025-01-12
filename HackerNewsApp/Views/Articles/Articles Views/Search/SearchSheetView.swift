@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct SearchSheetView: View {
+    
     @Environment(\.dismiss) var dismiss
-
     @EnvironmentObject var networkManager: NetworkManager
     @Environment(\.theme) var theme
 
     @State private var searchText: String = ""
+    @StateObject var savedSearchStore: SavedSearchStore
 
 
     var body: some View {
@@ -60,6 +61,7 @@ struct SearchSheetView: View {
        
     private func searchCall() {
         networkManager.fetchData(callURL: SearchURLFormatter(searchText: searchText).formatURL(text: searchText))
+        savedSearchStore.addSearch(searchText)
         dismiss()
     }
 }
@@ -78,8 +80,8 @@ extension View {
 }
 
 
-struct SearchSheetView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchSheetView()
-    }
-}
+//struct SearchSheetView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SearchSheetView()
+//    }
+//}

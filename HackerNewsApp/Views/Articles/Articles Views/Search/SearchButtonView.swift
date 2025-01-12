@@ -10,8 +10,8 @@ import SwiftUI
 struct SearchButtonView: View {
     
     @Environment(\.theme) var theme
-
     @State private var showingSearchSheet = false
+    @StateObject var savedSearchStore: SavedSearchStore
 
     var body: some View {
         Button(action: {
@@ -30,14 +30,14 @@ struct SearchButtonView: View {
         .cornerRadius(5.0)
         .shadow(radius: 2)
         .sheet(isPresented: $showingSearchSheet) {
-            SearchSheetView()
+            SearchSheetView(savedSearchStore: savedSearchStore)
                 .presentationDetents([.fraction(0.3)])
         }
     }
 }
 
-struct SearchButtonView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchButtonView()
-    }
-}
+//struct SearchButtonView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SearchButtonView()
+//    }
+//}

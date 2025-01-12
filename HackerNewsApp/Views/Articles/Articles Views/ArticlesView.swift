@@ -12,7 +12,7 @@ struct ArticlesView: View {
     @Environment(\.theme) var theme
     @StateObject var networkManager = NetworkManager()
     @StateObject var savedPosts = SavedPosts()
-
+    @StateObject var savedSearchStore: SavedSearchStore
     
     var body: some View {
         NavigationView {
@@ -48,11 +48,11 @@ struct ArticlesView: View {
                     .refreshable {
                         self.networkManager.reFetchData()
                     }
-                    SearchButtonView()
+                    SearchButtonView(savedSearchStore: savedSearchStore)
                         .padding(10)
                         .shadow(radius: 6)
                 }
-                ButtonsView()
+                ButtonsView(searchHistory: savedSearchStore)
                     .padding(.top, -8)
             }
         }

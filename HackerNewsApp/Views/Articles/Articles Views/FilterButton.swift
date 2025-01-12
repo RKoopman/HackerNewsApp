@@ -22,15 +22,24 @@ struct FilterButton: View {
                 hapticFB.impactOccurred()
         }) {
             Text(buttonText)
-                .font(.system(size: 23))
-                .fontWeight(.heavy)
-                .foregroundColor(theme.buttonTextPrimaryColor)
-                .padding(.horizontal, 8)
-                .padding(.vertical, 8)
+                .buttonTextStyle(color: theme.buttonTextPrimaryColor)
         }
-        .background(theme.brandPrimaryColor) 
+        .background(theme.brandPrimaryColor)
         .cornerRadius(5.0)
         .shadow(radius: 2)
+    }
+}
+
+extension Text {
+    @ViewBuilder
+    
+    func buttonTextStyle(color: Color) -> some View {
+        self
+            .font(.system(size: 23))
+            .fontWeight(.heavy)
+            .foregroundColor(color)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 8)
     }
 }
 

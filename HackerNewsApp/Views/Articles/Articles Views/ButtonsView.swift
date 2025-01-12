@@ -10,12 +10,14 @@ import SwiftUI
 struct ButtonsView: View {
     
     @Environment(\.theme) var theme
+    @StateObject var searchHistory: SavedSearchStore
     
     let filterManager = FilterManager.shared
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) {
             HStack {
+                SearchResultsButtonView(savedSearchStore: searchHistory)
                 filterManager.setupButton(for: .frontPage)
                 filterManager.setupButton(for: .latest)
                 filterManager.setupButton(for: .apple)
@@ -27,13 +29,3 @@ struct ButtonsView: View {
         .background(theme.backgroundPrimaryColor)
     }
 }
-
-struct ButtonsView_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack {
-            Spacer()
-            ButtonsView()
-        }
-    }
-}
-

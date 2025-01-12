@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct SearchSheetView: View {
+    
     @Environment(\.dismiss) var dismiss
-
     @EnvironmentObject var networkManager: NetworkManager
     @Environment(\.theme) var theme
 
     @State private var searchText: String = ""
+    @StateObject var savedSearchStore: SavedSearchStore
 
 
     var body: some View {
@@ -26,7 +27,7 @@ struct SearchSheetView: View {
                 }
                     .font(.title)
                     .fontWeight(.medium)
-                    .foregroundColor(theme.textPrimaryColor) // color of typed input
+                    .foregroundColor(theme.textPrimaryColor)
                     .padding()
                     .keyboardType(.webSearch)
                     .onSubmit {
@@ -60,6 +61,7 @@ struct SearchSheetView: View {
        
     private func searchCall() {
         networkManager.fetchData(callURL: SearchURLFormatter(searchText: searchText).formatURL(text: searchText))
+        savedSearchStore.addSearch(searchText)
         dismiss()
     }
 }
@@ -74,12 +76,5 @@ extension View {
             placeholder().opacity(shouldShow ? 1 : 0)
             self
         }
-    }
-}
-
-
-struct SearchSheetView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchSheetView()
     }
 }

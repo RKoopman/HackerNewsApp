@@ -12,12 +12,14 @@ struct HackerLandingView: View {
     
     var body: some View {
         ZStack {
+            
             Image("HLandingImage")
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
-
+            
             VStack {
+                
                 Spacer()
                 
                 Text("h")

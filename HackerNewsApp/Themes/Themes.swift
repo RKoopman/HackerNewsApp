@@ -110,21 +110,3 @@ struct Theme02: Theme {
     var buttonContructiveColor: Color = .appColor(.lightBlue30)
     var buttonDestructiveColor: Color = .appColor(.red50)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-//class AllThemes {
-//    var themes: [Theme] = [
-//        
-//    ]
-//}

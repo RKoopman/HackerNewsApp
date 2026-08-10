@@ -10,7 +10,6 @@ import ColorLibrary
 
 struct ThemeSettingsView: ButtonStyle {
     
-
     var brand: Color
     var background: Color
     var button: Color

@@ -10,10 +10,8 @@ import SwiftUI
 struct HackerView: View {
 
     @Environment(\.theme) var theme
-
     @StateObject var savedPosts = SavedPosts()
     @StateObject var savedSearchStore = SavedSearchStore()
-
     @State var isSettingsShown:Bool = false
     
     var body: some View {

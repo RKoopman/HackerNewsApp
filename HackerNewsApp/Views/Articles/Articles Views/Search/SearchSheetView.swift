@@ -12,10 +12,8 @@ struct SearchSheetView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var networkManager: NetworkManager
     @Environment(\.theme) var theme
-
     @State private var searchText: String = ""
     @StateObject var savedSearchStore: SavedSearchStore
-
 
     var body: some View {
         VStack {

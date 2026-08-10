@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 class SavedPosts: ObservableObject {
+    
     @Published var posts: [Post] = []
     
     init() {
@@ -17,10 +18,6 @@ class SavedPosts: ObservableObject {
             self.posts = decodedPosts
         }
     }
-    
-//    func getSavedPosts() -> [Post] {
-//        return posts.unique()
-//    }
     
     func add(item: Post) {
             posts.append(item)

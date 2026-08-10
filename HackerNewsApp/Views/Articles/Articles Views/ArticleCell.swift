@@ -15,7 +15,6 @@ struct ArticleCell: View {
     var title:String
     var url:String
     
-    
     var body: some View {
         HStack {
             Text(String(points))

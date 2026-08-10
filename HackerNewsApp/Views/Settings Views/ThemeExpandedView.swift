@@ -11,7 +11,6 @@ struct ThemeExpandedView: View {
     
     @Environment(\.theme) var theme
     
-    
     var body: some View {
         VStack {
             HStack {

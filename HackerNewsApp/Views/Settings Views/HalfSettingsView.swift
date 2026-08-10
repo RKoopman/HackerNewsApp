@@ -10,7 +10,6 @@ import SwiftUI
 struct HalfSettingsView: View {
     
     @Environment(\.theme) var theme
-    
     @State var expandedThemeView:Bool = false
 
     var body: some View {

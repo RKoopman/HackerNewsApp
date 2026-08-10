@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 class SavedSearchStore: ObservableObject {
+    
     @Published var searches: [String] = []
     
     init() {

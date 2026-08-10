@@ -10,6 +10,7 @@ import Foundation
 class NetworkManager: ObservableObject {
     
     @Published var posts = [Post]()
+    
     private var recentURL:String = ""
     
     func fetchData(callURL: String) {

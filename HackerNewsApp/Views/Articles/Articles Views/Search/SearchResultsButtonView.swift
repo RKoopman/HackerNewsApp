@@ -14,6 +14,7 @@ struct SearchResultsButtonView: View {
     @StateObject var savedSearchStore: SavedSearchStore
 
     var body: some View {
+        
         Button(action: {
             self.showResults.toggle()
             print("show history \(showResults.description)")

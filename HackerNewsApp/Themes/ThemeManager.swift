@@ -10,6 +10,7 @@ import SwiftUI
 
 
 enum ThemeManager {
+    
     static let themes: [Theme] = [Theme00(), Theme01(), Theme02()]
     
     static func getTheme (_ id: Int) -> Theme {

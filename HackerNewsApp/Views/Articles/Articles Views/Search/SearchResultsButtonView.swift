@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SearchResultsButtonView: View {
+    
     @Environment(\.theme) var theme
     @State private var showResults = false
     @StateObject var savedSearchStore: SavedSearchStore
@@ -19,18 +20,17 @@ struct SearchResultsButtonView: View {
             let hapticFB = UIImpactFeedbackGenerator(style: .medium)
                 hapticFB.impactOccurred()
         }) {
-            Text("Search History")
-                .font(.system(size: 23))
-                .fontWeight(.heavy)
-                .foregroundColor(.white)
-                .padding(.horizontal, 8)
-                .padding(.vertical, 8)
+            Image(systemName: "book.fill")
+                .foregroundColor(theme.buttonTextPrimaryColor)
+                .font(Font.body.weight(.heavy))
+                .padding(.horizontal, 12)
+                .padding(.vertical, 12)
         }
-        .background(.red)
+        .background(theme.contrastBackgroundPrimaryColor)
         .cornerRadius(5.0)
         .shadow(radius: 2)
         .sheet(isPresented: $showResults) {
-            SearchHistoryView(searchHistory: savedSearchStore )
+            SearchHistoryView(searchHistory: savedSearchStore)
                 .presentationDetents([.fraction(0.3)])
         }
     }
